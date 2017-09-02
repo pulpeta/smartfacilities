@@ -26,15 +26,45 @@ class Model extends CI_Model {
     }
 
     function read_trend(){
-        $this->db->select('sf_records.temp, sf_records.humid, sf_records.date');
+        $this->db->select('temp, humid, date');
         $this->db->from('sf_records');
+        $this->db->join('sf_plcs', 'sf_records.plc_id = sf_plcs.id_plc');
         $this->db->where('plc_id', 1);
         $this->db->order_by('date', 'ASC');
-        $this->db->limit(8);
+        $this->db->limit(48);
         $querytrend = $this->db->get()->result();
 
         if ($querytrend){
             return $querytrend;
+        } else {
+            return null;
+        }
+    }
+
+    function readall_trend(){
+        $this->db->select('temp, humid, date');
+        $this->db->from('sf_records');
+        $this->db->join('sf_plcs', 'sf_records.plc_id = sf_plcs.id_plc');
+        $this->db->where('plc_id', 1);
+        $this->db->order_by('date', 'ASC');
+        $querytrend = $this->db->get()->result();
+
+        if ($querytrend){
+            return $querytrend;
+        } else {
+            return null;
+        }
+    }
+
+    function read_limits(){
+        $this->db->select('*');
+        $this->db->from('sf_limits');
+        $this->db->join('sf_plcs', 'sf_limits.plc_id = sf_plcs.id_plc');
+        $this->db->where('plc_id', 1);
+        $querylimits = $this->db->get()->result();
+
+        if ($querylimits){
+            return $querylimits;
         } else {
             return null;
         }

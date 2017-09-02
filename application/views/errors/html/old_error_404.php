@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Smart Facility - Page Not Found</title>
+<title>404 Page Not Found</title>
 <style type="text/css">
 
 ::selection { background-color: #E13300; color: white; }
@@ -57,10 +57,8 @@ p {
 </head>
 <body>
 	<div id="container">
-		<h1 style="text-align: center">OPS!!! Page not found </h1>
-        <p><strong>No panic</strong>, something went wrong but you'll not die... probably</p>
-        <p>The page you requested does not exist, maybe you typed a wrong address,
-            you can go back to the previous page or go directly to the home page</p>
+		<h1><?php echo $heading; ?></h1>
+		<?php echo $message; ?>
 	</div>
 </body>
 </html>

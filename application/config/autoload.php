@@ -139,5 +139,6 @@ $autoload['language'] = array();
 */
 $autoload['model'] = array(
     'model',
-    'admin/adminmodel'
+    'admin/adminmodel',
+    'admin/logsmodel'
 );

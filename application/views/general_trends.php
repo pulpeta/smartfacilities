@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Smart Facility 0.1</title>
+	<title>SF General Trends</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
 
@@ -21,28 +21,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span class="glyphicons glyphicons-factory"></span> SF</a>
+            <a class="navbar-brand" href="<?php echo site_url("welcome/index") ?>">SF <span class="glyphicons glyphicons-factory"></span></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <!-- user menu -->
-                <li class="active"><a href="/smartfacilities">General Trend <span class="sr-only">(current)</span><span class="glyphicons glyphicons-pie-chart"></span></a></li>
-                <!-- supervisor menu -->
-                <li><a href="#">Users Permissions <span class="glyphicons glyphicons-keys"></span></a></li>
-                <li><a href="#">Operational Settings <span class="glyphicons glyphicons-adjust-alt"></span></a></li>
-                <!-- administrator menu -->
-                <li><a href="#">Users Management <span class="glyphicons glyphicons-group"></span></a></li>
-                <li><a href="#">Maintenance <span class="glyphicons glyphicons-blacksmith"></span></a></li>
-                <li><a href="#">Logs <span class="glyphicons glyphicons-stethoscope"></span></a></li>
-
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-                </li>
+                <li class="active"><a href="<?php echo site_url("welcome/trends") ?>">General Trends <span class="sr-only">(current)</span><span class="glyphicons glyphicons-pie-chart"></span></a></li>
+                <li><a href="<?php echo site_url("welcome/login") ?>">Login <span class="glyphicons glyphicons-log-in"></span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -50,27 +37,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="container-fluid">
 
-    <div class="row">
-        <div class="col-sm-4">
-
+    <div class="row text-center">
+        <div class="col-sm-1">
+            1
         </div>
-        <div class="col-sm-4">
-
+        <div class="col-sm-10">
+            <?php foreach ($trends as $trend): ?>
+                <p>
+                    <?php
+                        echo $trend->temp.'° C';
+                        echo $trend->humid.' %';
+                        echo $trend->date;
+                    ?>
+                </p>
+            <?php endforeach; ?>
         </div>
-        <div class="col-sm-4">
-
+        <div class="col-sm-1">
+            3
         </div>
     </div>
 
-    <div class="row">
+    <div class="row text-center">
         <div class="col-sm-4">
-
+            4
         </div>
         <div class="col-sm-4">
-
+            5
         </div>
         <div class="col-sm-4">
-
+            6
         </div>
     </div>
 
@@ -87,8 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script src="<?php echo base_url('resources/js/jquery-3.2.1.min.js'); ?>"></script>
 <script src="<?php echo base_url('resources/js/bootstrap.min.js'); ?>"></script>
-<script src="<?php echo base_url('resources/js/npm.js'); ?>"></script>>
+<script src="<?php echo base_url('resources/js/npm.js'); ?>"></script>
 <script src="<?php echo base_url('resources/js/Chart.js'); ?>"></script>
-<script src="<?php echo base_url('resources/js/Chart.bundle.min.js'); ?>"></script>
 
 </html>
