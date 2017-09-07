@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
                 <li><a href="<?php echo site_url('admin/maintenancecontroller/index') ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
-                <li><a href="<?php echo site_url('admin/logscontroller/logsindex') ?>"><span class="glyphicons glyphicons-group"></span> View System Logs</a></li>
+                <li><a href="<?php echo site_url('admin/logscontroller/logsindex') ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
                 <li><a href="<?php echo site_url("admin/admincontroller/logout") ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -86,17 +86,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="col-sm-3 text-left">
                 <p>
-                    <a href="<?php echo site_url("admin/indexadmin/edit_user/$user->id_user"); ?>">
+                    <a href="<?php echo site_url("admin/admincontroller/edit_user/$user->id_user"); ?>">
                         <span class="glyphicons glyphicons-pencil text-primary"></span></a>
 
-                    <a href="<?php echo site_url("admin/indexadmin/delete_user/$user->id_user"); ?>">
+                    <a href="<?php echo site_url("admin/admincontroller/delete_user/$user->id_user"); ?>">
                         <span class="glyphicons glyphicons-bin text-danger"></span></a>
 
-                    <a href="<?php if(($user->enabled) == 1){
-                                        echo site_url("admin/indexadmin/edit_user/$user->id_user");
+                    <a href="<?php
+                                if(($user->enabled) == 1){
+                                        echo site_url("admin/admincontroller/disable_user/$user->id_user");
                                         echo '"><span class="glyphicons glyphicons-check text-info"></span></a>';
                                     }else{
-                                        echo site_url("admin/indexadmin/edit_user/$user->id_user");
+                                        echo site_url("admin/admincontroller/enable_user/$user->id_user");
                                         echo '"><span class="glyphicons glyphicons-unchecked text-info"></span></a>';
                                     }
                                 ?>

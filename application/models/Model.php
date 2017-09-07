@@ -12,7 +12,6 @@ class Model extends CI_Model {
         $this->db->select('sf_users.username');
         $this->db->from('sf_users');
         $this->db->join('sf_logs', 'sf_logs.user_id = sf_users.id_user');
-        $this->db->where('event_type_id', 1);
         $this->db->order_by('id_log', 'DESC');
         $this->db->limit(1);
         $query = $this->db->get()->result();
@@ -58,8 +57,8 @@ class Model extends CI_Model {
 
     function read_limits(){
         $this->db->select('*');
-        $this->db->from('sf_limits');
-        $this->db->join('sf_plcs', 'sf_limits.plc_id = sf_plcs.id_plc');
+        $this->db->from('sf_plc_parameters');
+        $this->db->join('sf_plcs', 'sf_plc_parameters.plc_id = sf_plcs.id_plc');
         $this->db->where('plc_id', 1);
         $querylimits = $this->db->get()->result();
 

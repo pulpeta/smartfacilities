@@ -38,20 +38,38 @@ class Admincontroller extends CI_Controller{
     }
 
     function delete_user(){
-
+        $id = $this->uri->segment(4);
+        if ($id != 1){
+            //se non è il default admin cancella l'utente
+            $this->adminmodel->delete_user($id);
+        }
+        redirect('admin/admincontroller');
     }
 
     function enable_user(){
-        //select info stato utente
-        //se abilitato aggiorna come disabilitato
-        //se disabilitato aggiorna come abilitato
+        $id = $this->uri->segment(4);
+        $data = array(
+            'enabled' => 1
+        );
+        $this->adminmodel->update_user($id, $data);
 
-        $this->load->view('admin/indexadmin');
+        redirect('admin/admincontroller');
+    }
+
+    function disable_user(){
+        $id = $this->uri->segment(4);
+        $data = array(
+            'enabled' => 0
+        );
+        $this->adminmodel->update_user($id, $data);
+
+        redirect('admin/admincontroller');
     }
 
     function logout(){
-        //distrugge sessione e reindirizza
+        //distrugge sessione
 
+        // reindirizza alla home page
         $this->load->view('welcome_message');
     }
 }

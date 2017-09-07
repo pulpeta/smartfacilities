@@ -22,37 +22,16 @@ class Adminmodel extends CI_Model
     }
 
     function read_single_user($id){
-        $this->db->select('*');
-        $this->db->from('sf_users');
-        $this->db->where('id_user', $id);
-        $query = $this->db->get()->result();
 
-        return $query[0];
-    }
-
-    function update_user($id, $data){
-        $this->db->where('id_user', $id);
-        $this->db->update('sf_users', $data);
     }
 
     function delete_user($id){
-        //prima verifica che l'utente da eliminare non sia il default administrator, id 1
-        //per ragioni di sicurezza il default admin può solo essere disabilitato da un altro admin
-        if($id!=1){
-            $this->db->where('id_user', $id);
-            $this->db->delete(sf_users);
-        }else{
-            //Warning: Default Administrator cannot be deleted
-        }
+        $this->db->where('id_user', $id);
+        $this->db->delete('sf_users');
     }
 
-    function enable_user($id, $data){
-        if ($data == 1){
+    function update_user($id, $data){
             $this->db->where('id_user', $id);
             $this->db->update('sf_users', $data);
-        }else{
-            $this->db->where('id_user', $id);
-            $this->db->update('sf_users', $data);
-        }
     }
 }
