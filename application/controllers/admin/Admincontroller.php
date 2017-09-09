@@ -9,32 +9,40 @@ class Admincontroller extends CI_Controller{
         $this->load->view('admin/indexadmin', $users);
     }
 
+
+
     function edit_user(){
 
     }
 
+    function new_user(){
+        $roles['roles'] = $this->adminmodel->read_roles();
+        $this->load->view('admin/create_user', $roles);
+    }
+
     function create_user(){
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('name','Name','trim|required');
-        $this->form_validation->set_rules('username','Username','trim|required');
-        $this->form_validation->set_rules('password','Password','trim|required|min_lengh[8]|matches[passconf]');
-        $this->form_validation->set_rules('passconf','Password Confirmation','trim|required');
+
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
 
         if ($this->form_validation->run() == FALSE){
             //if failed
-            //$message = "Not valid data";
-            //$this->load->view('admin/new_user', $message);
-        }else{
-            $data=array(
-              'name' => $this->input->post(),
-              'role_id' => $this->input->post(),
-              'username' => $this->input->post(),
-              'password' => $this->input->post(),
-              'enabled' => 0,
-              'createdAt' => date('Y-m-d H:i:s')
-            );
-            $this->admin->adminmodel->$this->create_user('', $data);
-        }
+                echo 'no no no';
+            }else{
+                $data=array(
+                    'name' => $this->input->post('name'),
+                    'username' => $this->input->post('username'),
+                    'password' => $this->input->post('confirmpassword'),
+                    'role_id' => $this->input->post('role_id'),
+                    'enabled' => 0,
+                    'createdAt' => date('Y-m-d H:i:s')
+                );
+                $this->adminmodel->create_user($data);
+            }
+        //redirect('admin/admincontroller');
     }
 
     function delete_user(){

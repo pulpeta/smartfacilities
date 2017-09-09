@@ -4,9 +4,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //il nome della classe qui sotto deve corrispondere al nome del file
 class Adminmodel extends CI_Model
 {
-    function create_user($data){
+    function read_roles(){
+        $this->db->select('id_role, role');
+        $this->db->from('sf_roles');
+        $this->db->order_by('role', 'ASC');
+        $query = $this->db->get()->result();
 
+        return $query;
     }
+
+    function create_user($data){
+        print_r($data);
+        $this->db->insert('sf_users', $data);
+    }
+
+
 
     function read_users(){
         //popola la lista degli utenti ordinandola

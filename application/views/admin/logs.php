@@ -28,6 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
+                <li><a href="<?php echo site_url('admin/maintenancecontroller/index') ?>"><span class="glyphicons glyphicons-robot"></span> PLC Management</a></li>
                 <li><a href="<?php echo site_url('admin/maintenancecontroller/index') ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
                 <li class="active"><a href="<?php echo site_url('admin/logscontroller/logsindex') ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
                 <li><a href="<?php echo site_url("admin/admincontroller/logout") ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
@@ -40,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row text-center">
         <div class="col-sm">
-            <h2><span class="glyphicons glyphicons-note"></span> System Logs</h2>
+            <h2 class="text-primary"><span class="glyphicons glyphicons-note"></span> System Logs</h2>
         </div>
     </div>
 
@@ -63,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 </li>
             </ul>
-            <a href="" class="badge" style="background-color: orange">ApplyFilter</a>
+            <a href="" class="badge" style="background-color: orange">Apply Filter</a>
         </div>
         <div class="col-sm-1">
 
