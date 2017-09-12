@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
-                <li><a href="<?php echo site_url('admin/maintenancecontroller/index') ?>"><span class="glyphicons glyphicons-robot"></span> PLC Management</a></li>
-                <li><a href="<?php echo site_url('admin/maintenancecontroller/index') ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
-                <li><a href="<?php echo site_url('admin/logscontroller/logsindex') ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
-                <li><a href="<?php echo site_url("admin/admincontroller/logout") ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
+                <li><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> PLC Management</a></li>
+                <li><a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
+                <li><a href="<?php echo site_url('admin/logscontroller/logsindex'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
+                <li><a href="<?php echo site_url("admin/admincontroller/logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -63,24 +63,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-1"></div>
             <div class="col-sm-2 text-left">
                 <?php if (($user->enabled) == 1){
-                    echo '<p class="text-info">'.$user->role.'</p>';
+                    echo '<p class="text-primary">'.$user->role.'</p>';
                 }else{
-                    echo '<p class="text-info" style="text-decoration: line-through">'.$user->role.'</p>';
+                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->role.'</p>';
                 }
                 ?>
             </div>
             <div class="col-sm-3 text-left text-uppercase">
                 <?php if (($user->enabled) == 1){
-                    echo '<p class="text-info">'.$user->name . '  -  ' . $user->username . '</p>';
+                    echo '<p class="text-primary">'.$user->name . '  -  ' . $user->username . '</p>';
                 }else{
-                    echo '<p class="text-info" style="text-decoration: line-through">'.$user->name . '  -  ' . $user->username . '</p>';
+                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->name . '  -  ' . $user->username . '</p>';
                 }
                 ?>
             </div>
-            <div class="col-sm-2 text-left text-uppercase">
+            <div class="col-sm-2 text-left">
                 <p class="text-info">
                     <?php
-                    echo "Last logon at: ";
+                    echo "Last logon at:<br> ";
                     echo $user->lastlogonAt;
                     ?>
                 </p>
@@ -88,18 +88,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-3 text-left">
                 <p>
                     <a href="<?php echo site_url("admin/admincontroller/edit_user/$user->id_user"); ?>">
-                        <span class="glyphicons glyphicons-pencil text-primary"></span></a>
+                        <span class="glyphicons glyphicons-pencil" style="color: green"></span></a>
 
                     <a href="<?php echo site_url("admin/admincontroller/delete_user/$user->id_user"); ?>">
-                        <span class="glyphicons glyphicons-bin text-danger"></span></a>
+                        <span class="glyphicons glyphicons-bin" style="color: red"></span></a>
 
                     <a href="<?php
                                 if(($user->enabled) == 1){
                                         echo site_url("admin/admincontroller/disable_user/$user->id_user");
-                                        echo '"><span class="glyphicons glyphicons-check text-info"></span></a>';
+                                        echo '"><strong><span class="glyphicons glyphicons-thumbs-up" style="color: green"></span></strong></a>';
                                     }else{
                                         echo site_url("admin/admincontroller/enable_user/$user->id_user");
-                                        echo '"><span class="glyphicons glyphicons-unchecked text-info"></span></a>';
+                                        echo '"><strong><span class="glyphicons glyphicons-thumbs-down" style="color: gray"></span></strong></a>';
                                     }
                                 ?>
                 </p>

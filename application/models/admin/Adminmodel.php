@@ -7,18 +7,15 @@ class Adminmodel extends CI_Model
     function read_roles(){
         $this->db->select('id_role, role');
         $this->db->from('sf_roles');
-        $this->db->order_by('role', 'ASC');
+        $this->db->order_by('role', 'DESC');
         $query = $this->db->get()->result();
 
         return $query;
     }
 
     function create_user($data){
-        print_r($data);
         $this->db->insert('sf_users', $data);
     }
-
-
 
     function read_users(){
         //popola la lista degli utenti ordinandola
@@ -34,16 +31,30 @@ class Adminmodel extends CI_Model
     }
 
     function read_single_user($id){
+        $this->db->select('*');
+        $this->db->from('sf_users');
+        $this->db->where('sf_users.id_user', $id);
+        $query = $this->db->get()->result();
 
+        return $query;
+    }
+
+    function read_password($id){
+        $this->db->select('password');
+        $this->db->from('sf_users');
+        $this->db->where('sf_users.id_user', $id);
+        $query = $this->db->get()->result();
+
+        return $query;
+    }
+
+    function update_user($id, $data){
+        $this->db->where('id_user', $id);
+        $this->db->update('sf_users', $data);
     }
 
     function delete_user($id){
         $this->db->where('id_user', $id);
         $this->db->delete('sf_users');
-    }
-
-    function update_user($id, $data){
-            $this->db->where('id_user', $id);
-            $this->db->update('sf_users', $data);
     }
 }

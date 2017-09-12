@@ -10,7 +10,6 @@ class Logsmodel extends CI_Model{
         $this->db->join('sf_users','sf_users.id_user = sf_logs.user_id');
         $this->db->where('sf_logs.user_id = sf_users.id_user');
         $this->db->order_by('sf_logs.date', 'DESC');
-        $this->db->limit(50);
         $query = $this->db->get()->result();
 
         return $query;

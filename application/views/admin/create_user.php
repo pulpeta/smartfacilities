@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SF - DB Management</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
 
@@ -26,9 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-4">
             <form class="form-group" name="edituser_form" method="post" action="<?php echo site_url('admin/admincontroller/create_user'); ?>">
                 <input class="form-control" type="text" name="name" placeholder="Name" required autofocus style="margin-top: 10px">
-                <input class="form-control" type="text" name="username" placeholder="Username" style="margin-top: 10px">
-                <input class="form-control" type="password" name="password"  placeholder="Password" style="margin-top: 10px">
-                <input class="form-control" type="password" name="confirmpassword"  placeholder="Confirm password" style="margin-top: 10px">
+                <input class="form-control" type="text" name="username" placeholder="Username" required autofocus style="margin-top: 10px">
+                <input class="form-control" type="password" name="password"  placeholder="Password" required autofocus style="margin-top: 10px">
+                <input class="form-control" type="password" name="confirmpassword"  placeholder="Confirm password" required autofocus style="margin-top: 10px">
                 <label class="text-primary" for="selectrole" style="margin-top: 10px">User's Role</label>
 
                 <select class="form-control" name="role_id" style="margin-top: 10px">
@@ -42,6 +41,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <button class="btn btn-lg" type="reset">Reset</button>
                 </div>
             </form>
+            <div class="row text-center">
+                <a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
+            </div>
         </div>
         <div class="col-sm-4">
 
