@@ -27,11 +27,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
-                <li><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> PLC Management</a></li>
-                <li class="active"><a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
-                <li><a href="<?php echo site_url('admin/logscontroller/logsindex'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
-                <li><a href="<?php echo site_url("admin/admincontroller/logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
+                <li><a href="<?php echo site_url('admin/admincontroller/index'); ?>">
+                        <span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url('admin/plccontroller/index'); ?>">
+                        <span class="glyphicons glyphicons-robot"></span> PLC Management
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>">
+                        <span class="glyphicons glyphicons-wrench"></span> Maintenance
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url('admin/logscontroller/logsindex'); ?>">
+                        <span class="glyphicons glyphicons-note"></span> View System Logs
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url("admin/admincontroller/logout"); ?>">
+                        <span class="glyphicons glyphicons-log-out"></span> Logout
+                    </a>
+                </li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -51,16 +70,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-10">
             <div class="row text-left">
                 <div class="col-xs-4">
-                    <h4 class="text-center">Data Base</h4>
+                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-database"></span> Data Base</h3>
                     <p class="text-muted"><span class="glyphicons glyphicons-disk-export"></span> Export System Data Base</p>
                 </div>
                 <div class="col-xs-4">
-                    <h4 class="text-center">Tables</h4>
+                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-cargo"></span> Tables</h3>
                     <p class="text-muted"><span class="glyphicons glyphicons-stopwatch"></span> Tables optimization</p>
                     <p class="text-muted"><span class="glyphicons glyphicons-settings"></span> Tables maintenance</p>
                 </div>
                 <div class="col-xs-4">
-                    <h4 class="text-center">Logs</h4>
+                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-notes-2"></span> Logs</h3>
                     <p class="text-muted"><span class="glyphicons glyphicons-cleaning"></span> Clear logs older than 1 year</p>
                     <p class="text-danger"><span class="glyphicons glyphicons-skull"></span> Clear all logs</p>
                 </div>
