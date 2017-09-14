@@ -71,17 +71,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row text-left">
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-database"></span> Data Base</h3>
-                    <p class="text-muted"><span class="glyphicons glyphicons-disk-export"></span> Export System Data Base</p>
+                    <p style="color: royalblue"><span class="glyphicons glyphicons-disk-export"></span> Export System Data Base</p>
                 </div>
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-cargo"></span> Tables</h3>
-                    <p class="text-muted"><span class="glyphicons glyphicons-stopwatch"></span> Tables optimization</p>
-                    <p class="text-muted"><span class="glyphicons glyphicons-settings"></span> Tables maintenance</p>
+                    <p style="color: limegreen"><span class="glyphicons glyphicons-stopwatch"></span> Tables optimization</p>
+                    <p style="color: limegreen"><span class="glyphicons glyphicons-settings"></span> Tables maintenance</p>
                 </div>
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-notes-2"></span> Logs</h3>
-                    <p class="text-muted"><span class="glyphicons glyphicons-cleaning"></span> Clear logs older than 1 year</p>
-                    <p class="text-danger"><span class="glyphicons glyphicons-skull"></span> Clear all logs</p>
+                    <p style="color: orange"><span class="glyphicons glyphicons-cleaning"></span> Clear logs older than 1 year</p>
+                    <p style="color: red"><span class="glyphicons glyphicons-skull"></span> Clear all logs</p>
                 </div>
             </div>
             <div class="row text-left">

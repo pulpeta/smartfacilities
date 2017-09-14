@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 
-    <footer class="panel-footer">
+    <footer class="panel-footer text-center">
         <p class="text-muted">
             Smart Facility <span class="glyphicon glyphicon-copyright-mark"></span> Developed by Federico Sibella
         </p>

@@ -3,6 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Plccontroller extends CI_Controller{
 
+    public function __construct(){
+        parent::__construct();
+
+        $loggedin = $this->session->userdata('logged-in', 'role');
+
+        if(!isset($loggedin) || $loggedin != TRUE){
+            //not logged
+            redirect('welcome/login');
+        }
+    }
+
     function index(){
         $buildings['buildings'] = $this->plcmodel->list_buildings();
         $plcs['plcs'] = $this->plcmodel->list_plcs();

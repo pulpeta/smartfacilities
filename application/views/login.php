@@ -11,36 +11,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<div class="container-fluid" style="margin-top: 10%">
+<div class="container-fluid" style="margin-top: 90px">
     <div class="row">
 
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4">
-            <form class="form-signin" style="border-radius: 10px; background-color: lightgray; padding: 10px 10px 20px 10px;">
-                <h2 class="form-signin-heading" align="center"><span class="glyphicons glyphicons-factory x2"></span><br/>Smart Facility</h2>
-                <label for="inputUsername" class="sr-only">Username</label>
-                <input type="Username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
-                <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password"  style="margin-top: 10px">
-                <div class="checkbox">
+            <form class="form-signin" style="border-radius: 20px; background-color: lightgrey ; box-shadow: 10px 10px 5px #888888; padding: 10px 40px 30px 40px;" name="login_form" method="post" action="<?php echo site_url('login/user_login'); ?>">
+                <h2 class="form-signin-heading" align="center" style="margin-bottom: 30px"><span class="glyphicons glyphicons-factory x2"></span><br/>Smart Facility</h2>
+                <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+                <input type="password" name="password" class="form-control" placeholder="Password"  style="margin-top: 10px" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top: 50px">Log in <span class="glyphicons glyphicons-log-in"></span></button>
+                <div class="row text-center" style="margin-top: 30px">
+                    <a href="<?php echo site_url('welcome/index'); ?>"><span class="glyphicons glyphicons-home x2"></span></a>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Log in <span class="glyphicons glyphicons-log-in"></span></button>
             </form>
         </div>
 
         <div class="col-sm-4"></div>
-
-    </div>
-    <div class="row" style="margin-top: 20px">
-
-        <div class="col-sm-5"></div>
-
-        <div class="col-sm-2 text-center">
-            <p><a href="/smartfacilities">home</a></p>
-        </div>
-
-        <div class="col-sm-5"></div>
 
     </div>
 </div>

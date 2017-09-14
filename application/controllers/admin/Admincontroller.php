@@ -3,6 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admincontroller extends CI_Controller{
 
+    public function __construct(){
+        parent::__construct();
+
+        $loggedin = $this->session->userdata('logged-in', 'role');
+
+        if(!isset($loggedin) || $loggedin != TRUE){
+            //not logged
+            redirect('welcome/login');
+        }
+    }
+
     public function index(){
         //mostra tutti gli utenti del sistema
         $users['users'] = $this->adminmodel->read_users();
@@ -21,7 +32,7 @@ class Admincontroller extends CI_Controller{
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[sf_users.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Password Confirmation', 'trim|required|matches[password]');
 
@@ -74,7 +85,7 @@ class Admincontroller extends CI_Controller{
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('username', 'Username', 'trim|required');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[sf_users.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Password Confirmation', 'trim|required|matches[password]');
 
@@ -132,7 +143,7 @@ class Admincontroller extends CI_Controller{
 
     function logout(){
         //distrugge sessione
-
+        $this->session->sess_destroy();
         // reindirizza alla home page
         $this->load->view('welcome_message');
     }
