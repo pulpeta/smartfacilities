@@ -18,4 +18,8 @@ class Maintenancecontroller extends CI_Controller{
         $this->load->view('admin/maintenance');
 
     }
+
+    function clear_all_logs(){
+        $this->logsmodel->clear_all_logs();
+    }
 }

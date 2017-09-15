@@ -129,7 +129,7 @@ class Admincontroller extends CI_Controller{
             'date' => $creationdate,
             'username' => $_SESSION['username'],
             'event_type' => 'User Creation',
-            'event' => $this->input->post('name'). 'has been created'
+            'event' => $this->input->post('name'). ' has been created'
         );
         $this->logsmodel->trace_log($tracelog);
 

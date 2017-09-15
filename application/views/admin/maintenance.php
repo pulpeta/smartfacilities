@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-notes-2"></span> Logs</h3>
                     <p style="color: orange"><span class="glyphicons glyphicons-cleaning"></span> Clear logs older than 1 year</p>
-                    <p style="color: red"><span class="glyphicons glyphicons-skull"></span> Clear all logs</p>
+                    <p><a style="color: red; text-decoration: none" href="<?php echo site_url('admin/maintenancecontroller/clear_all_logs')?>"><span class="glyphicons glyphicons-skull"></span> Clear all logs</a></p>
                 </div>
             </div>
             <div class="row text-left">

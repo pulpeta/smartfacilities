@@ -103,10 +103,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-1">
             <p><?php echo $log->username; ?></p>
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <p><?php echo $log->event_type; ?></p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5">
             <p><?php echo $log->event; ?></p>
         </div>
         <div class="col-sm-1">

@@ -45,8 +45,4 @@ class Logscontroller extends CI_Controller{
                 echo "<p style='margin-left: 30px'>Nessun record trovato nella tabella dei Logs. In caso di errore contattare l'amministratore del sistema...<br/> ah già sei tu...<br/>beh fai 2 controlli che sembra essere il caso</p>";
             }
     }
-
-    function trace_log($table, $data){
-        $this->db->insert($table, $data);
-    }
 }

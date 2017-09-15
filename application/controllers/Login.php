@@ -21,7 +21,7 @@ class Login extends CI_Controller {
             if ($user){
                 //crea dati sessione
                 $data = array(
-                    'id_username' => $user->id_user,
+                    'id_user' => $user->id_user,
                     'username' => $user->username,
                     'role_id' => $user->role_id,
                     'logged-in' => true
