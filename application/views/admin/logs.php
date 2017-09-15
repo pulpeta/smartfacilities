@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <div class="col-sm-2">
-            <h3><a class="badge" href="" style="background-color: green">Export csv</a></h3>
+            <h3><a class="badge" href="<?php echo site_url('admin/logscontroller/export_logs')?>" style="background-color: green">Export csv</a></h3>
         </div>
         <div class="col-sm-8">
             <h4>Filter options:</h4>

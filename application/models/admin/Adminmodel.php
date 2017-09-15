@@ -39,6 +39,15 @@ class Adminmodel extends CI_Model
         return $query;
     }
 
+    function read_user_name($id){
+        $this->db->select('name');
+        $this->db->from('sf_users');
+        $this->db->where('sf_users.id_user', $id);
+        $query = $this->db->get()->result();
+
+        return $query;
+    }
+
     function read_password($id){
         $this->db->select('password');
         $this->db->from('sf_users');

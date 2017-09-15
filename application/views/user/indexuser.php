@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SF - Admin Area</title>
+    <title>SF - Restricted Area</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
 
@@ -39,75 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </nav>
 
 <div class="container-fluid">
-    <div class="row text-center">
-        <div class="col-sm">
-            <h2 class="text-primary"><span class="glyphicons glyphicons-group"></span> Users Management</h2>
-        </div>
-    </div>
-    <div class="table">
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2 text-left"><h3 class="text-info">Role</h3></div>
-            <div class="col-sm-3 text-left"><h3 class="text-info">User</h3></div>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-3 text-left">
-                <a href="<?php echo site_url("admin/admincontroller/new_user"); ?>">
-                    <h3 class="badge text-primary" style="background-color: green">Add New</h3>
-                </a>
-            </div>
-            <div class="col-sm-1"></div>
-        </div>
 
-        <?php foreach ($users as $user): ?>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2 text-left">
-                <?php if (($user->enabled) == 1){
-                    echo '<p class="text-primary">'.$user->role.'</p>';
-                }else{
-                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->role.'</p>';
-                }
-                ?>
-            </div>
-            <div class="col-sm-3 text-left text-uppercase">
-                <?php if (($user->enabled) == 1){
-                    echo '<p class="text-primary">'.$user->name . '  -  ' . $user->username . '</p>';
-                }else{
-                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->name . '  -  ' . $user->username . '</p>';
-                }
-                ?>
-            </div>
-            <div class="col-sm-2 text-left">
-                <p class="text-info">
-                    <?php
-                    echo "Last logon at:<br> ";
-                    echo $user->lastlogonAt;
-                    ?>
-                </p>
-            </div>
-            <div class="col-sm-3 text-left">
-                <p>
-                    <a href="<?php echo site_url("admin/admincontroller/edit_user/$user->id_user"); ?>">
-                        <span class="glyphicons glyphicons-pencil" style="color: green"></span></a>
-
-                    <a href="<?php echo site_url("admin/admincontroller/delete_user/$user->id_user"); ?>">
-                        <span class="glyphicons glyphicons-bin" style="color: red"></span></a>
-
-                    <a href="<?php
-                                if(($user->enabled) == 1){
-                                        echo site_url("admin/admincontroller/disable_user/$user->id_user");
-                                        echo '"><strong><span class="glyphicons glyphicons-thumbs-up" style="color: green"></span></strong></a>';
-                                    }else{
-                                        echo site_url("admin/admincontroller/enable_user/$user->id_user");
-                                        echo '"><strong><span class="glyphicons glyphicons-thumbs-down" style="color: gray"></span></strong></a>';
-                                    }
-                                ?>
-                </p>
-            </div>
-            <div class="col-sm-1"></div>
-        </div>
-        <?php endforeach; ?>
-    </div>
 
     <footer class="panel-footer text-center">
         <p class="text-muted">

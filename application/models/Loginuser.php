@@ -10,7 +10,8 @@ class Loginuser extends CI_Model {
         $this->db->from('sf_users');
         $this->db->where('username', $username);
         $this->db->where('password', sha1($password));
-        $query = $this->db->get();
+        $this->db->where('enabled', 1);
+            $query = $this->db->get();
 
         if ($query && $query->num_rows() == 1){
             return $query->result()[0];

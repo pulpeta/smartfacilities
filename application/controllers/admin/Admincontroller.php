@@ -45,6 +45,7 @@ class Admincontroller extends CI_Controller{
         //verifica eventuali cambi della password
         //recupera quella vecchia dal db
         $id = $this->input->post('id_user');
+        $editdate = date('Y-m-d H:i:s');
         $old_pw= $this->adminmodel->read_password($id);
         $pw = $this->input->post('confirmpassword');
         if ($old_pw != $pw) {
@@ -58,6 +59,7 @@ class Admincontroller extends CI_Controller{
                 'username' => $this->input->post('username'),
                 'password' => $pw2save,
                 'role_id' => $this->input->post('role_id'),
+                'editedAt' => $editdate,
                 'pwexpireAt' => $newdate
             );
 
@@ -68,10 +70,21 @@ class Admincontroller extends CI_Controller{
             $data=array(
                 'name' => $this->input->post('name'),
                 'username' => $this->input->post('username'),
-                'role_id' => $this->input->post('role_id'),
+                'editedAt' => $editdate,
+                'role_id' => $this->input->post('role_id')
             );
         }
+
         $this->adminmodel->update_user($id, $data);
+
+        //trace user editing
+        $tracelog=array(
+            'date' => $editdate,
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Updated',
+            'event' => $this->input->post('name'). ' has been updated'
+        );
+        $this->logsmodel->trace_log($tracelog);
 
         redirect('admin/admincontroller');
     }
@@ -95,6 +108,7 @@ class Admincontroller extends CI_Controller{
             echo validation_errors();
             echo '</p>';
             }else{
+                $creationdate = date('Y-m-d H:i:s');
                 $pw = $this->input->post('confirmpassword');
                 $cpw = sha1($pw);
                 //TO DO funzione scadenza password
@@ -104,45 +118,108 @@ class Admincontroller extends CI_Controller{
                     'password' => $cpw,
                     'role_id' => $this->input->post('role_id'),
                     'enabled' => 0,
-                    'createdAt' => date('Y-m-d H:i:s')
+                    'createdAt' => $creationdate
                     //TO DO password expire
                 );
                 $this->adminmodel->create_user($data);
             }
+
+        //trace user creation
+        $tracelog=array(
+            'date' => $creationdate,
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Creation',
+            'event' => $this->input->post('name'). 'has been created'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
         redirect('admin/admincontroller');
     }
 
     function delete_user(){
         $id = $this->uri->segment(4);
+        $user_name = $this->adminmodel->read_user_name($id);
+        foreach ($user_name as $un){
+            $name = $un->name;
+        }
+
         if ($id != 1){
             //se non è il default admin cancella l'utente
             $this->adminmodel->delete_user($id);
         }
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Removed',
+            'event' => $name .' has been deleted'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
         redirect('admin/admincontroller');
     }
 
     function enable_user(){
         $id = $this->uri->segment(4);
+        $user_name = $this->adminmodel->read_user_name($id);
+        foreach ($user_name as $un){
+            $name = $un->name;
+        }
+        $editdate=date('Y-m-d H:i:s');
+
         $data = array(
-            'enabled' => 1
+            'enabled' => 1,
+            'editedAt' => $editdate
         );
         $this->adminmodel->update_user($id, $data);
+
+        $tracelog=array(
+            'date' => $editdate,
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Enabled',
+            'event' => $name. ' has been enabled'
+        );
+        $this->logsmodel->trace_log($tracelog);
 
         redirect('admin/admincontroller');
     }
 
     function disable_user(){
         $id = $this->uri->segment(4);
+        $user_name = $this->adminmodel->read_user_name($id);
+        foreach ($user_name as $un){
+            $name = $un->name;
+        }
+        $editdate=date('Y-m-d H:i:s');
+
         $data = array(
-            'enabled' => 0
+            'enabled' => 0,
+            'editedAt' => $editdate
         );
         $this->adminmodel->update_user($id, $data);
+
+        $tracelog=array(
+            'date' => $editdate,
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Disabled',
+            'event' =>  $name. ' has been disabled'
+        );
+        $this->logsmodel->trace_log($tracelog);
 
         redirect('admin/admincontroller');
     }
 
     function logout(){
         //distrugge sessione
+
+        $tracelog=array(
+            'date' => date ( 'Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Log out',
+            'event' => 'User is now disconnected'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
         $this->session->sess_destroy();
         // reindirizza alla home page
         $this->load->view('welcome_message');
