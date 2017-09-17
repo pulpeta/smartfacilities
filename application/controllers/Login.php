@@ -33,7 +33,7 @@ class Login extends CI_Controller {
                     'date' => $logondate,
                     'username' => $user->username,
                     'event_type' => 'User Logon',
-                    'event' => 'user logon successfully'
+                    'event' => 'User logon successfully'
                 );
                 $this->logsmodel->trace_log($tracelog);
 
@@ -60,6 +60,12 @@ class Login extends CI_Controller {
                 }
 
             }else{
+                //verifica i tentativi:
+                //verifica se utente è valido
+                //se valido verifica tentativi di logon
+                //se ==4 disabilita l'utente e azzera
+                //se <4 +1
+
                 $tracelog=array(
                     'date' => $logondate,
                     'username' => $this->input->post('username'),
@@ -70,5 +76,21 @@ class Login extends CI_Controller {
                 redirect('welcome/login');
             }
         }
+    }
+
+    function user_logout(){
+        //distrugge sessione
+
+        $tracelog=array(
+            'date' => date ( 'Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'User Log out',
+            'event' => 'User is now disconnected'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        $this->session->sess_destroy();
+        // reindirizza alla home page
+        redirect('welcome');
     }
 }

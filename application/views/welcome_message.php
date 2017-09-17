@@ -28,7 +28,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <ul class="nav navbar-nav">
                 <!-- user menu -->
                 <li><a href="<?php echo site_url("welcome/trends") ?>">General Trends <span class="sr-only">(current)</span><span class="glyphicons glyphicons-pie-chart"></span></a></li>
-                <li><a href="<?php echo site_url("welcome/login") ?>">Login <span class="glyphicons glyphicons-log-in"></span></a></li>
+                <li><a href="
+                        <?php
+                        $loggedin = $this->session->userdata('logged-in');
+                        if(!isset($loggedin) || $loggedin != TRUE){
+                            echo site_url("welcome/login");
+                            echo '">Login <span class="glyphicons glyphicons-log-in"></span></a></li>';
+                        }else{
+                            echo site_url("login/user_logout");
+                            echo '">Logout <span class="glyphicons glyphicons-log-out"></span></a></li>';
+                            }
+                        ?>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

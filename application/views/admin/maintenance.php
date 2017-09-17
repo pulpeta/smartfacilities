@@ -42,12 +42,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url('admin/logscontroller/logsindex'); ?>">
+                    <a href="<?php echo site_url('admin/logscontroller/index'); ?>">
                         <span class="glyphicons glyphicons-note"></span> View System Logs
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url("admin/admincontroller/logout"); ?>">
+                    <a href="<?php echo site_url("login/user_logout"); ?>">
                         <span class="glyphicons glyphicons-log-out"></span> Logout
                     </a>
                 </li>
@@ -71,23 +71,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row text-left">
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-database"></span> Data Base</h3>
-                    <p style="color: royalblue"><span class="glyphicons glyphicons-disk-export"></span> Export System Data Base</p>
+                    <p style="color: royalblue"><span class="glyphicons glyphicons-disk-export"></span> Backup System Data Base</p>
                 </div>
                 <div class="col-xs-4">
                     <h3 class="text-center text-primary"><span class="glyphicons glyphicons-cargo"></span> Tables</h3>
-                    <p style="color: limegreen"><span class="glyphicons glyphicons-stopwatch"></span> Tables optimization</p>
-                    <p style="color: limegreen"><span class="glyphicons glyphicons-settings"></span> Tables maintenance</p>
+                    <p><a href="<?php echo site_url('admin/maintenancecontroller/db_optimization') ?>" style="color: limegreen; text-decoration: none"><span class="glyphicons glyphicons-stopwatch"></span> Tables optimization</a></p>
                 </div>
                 <div class="col-xs-4">
-                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-notes-2"></span> Logs</h3>
-                    <p style="color: orange"><span class="glyphicons glyphicons-cleaning"></span> Clear logs older than 1 year</p>
-                    <p><a style="color: red; text-decoration: none" href="<?php echo site_url('admin/maintenancecontroller/clear_all_logs')?>"><span class="glyphicons glyphicons-skull"></span> Clear all logs</a></p>
+                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-stats"></span> Stats</h3>
+                    <p>This functions will be implemented in the next release</p>
                 </div>
-            </div>
-            <div class="row text-left">
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4"></div>
             </div>
         </div>
         <div class="col-sm-1">

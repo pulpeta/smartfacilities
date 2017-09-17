@@ -30,8 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
                 <li><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> PLC Management</a></li>
                 <li><a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
-                <li class="active"><a href="<?php echo site_url('admin/logscontroller/logsindex'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
-                <li><a href="<?php echo site_url("admin/admincontroller/logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
+                <li class="active"><a href="<?php echo site_url('admin/logscontroller/index'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
+                <li><a href="<?php echo site_url("login/user_logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -50,7 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <div class="col-sm-2">
-            <h3><a class="badge" href="<?php echo site_url('admin/logscontroller/export_logs')?>" style="background-color: green">Export csv</a></h3>
+            <p><a class="badge" href="<?php echo site_url('admin/logscontroller/export_logs')?>" style="background-color: green">Export csv</a></p>
+            <p><a class="badge" href="<?php echo site_url('admin/logscontroller/clear_all_logs')?>" style="background-color: red">Clear all Logs</a></p>
+            <p><a class="badge" href="<?php echo site_url('admin/logscontroller/aging_logs')?>" style="background-color: orange">Delete Logs 1yo</a></p>
         </div>
         <div class="col-sm-8">
             <h4>Filter options:</h4>
@@ -81,10 +83,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-1">
             <h3 class="text-info">User</h3>
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-2">
             <h3 class="text-info">Event</h3>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5">
             <h3 class="text-info">Description</h3>
         </div>
         <div class="col-sm-1">

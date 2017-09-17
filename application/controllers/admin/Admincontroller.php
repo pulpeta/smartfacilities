@@ -6,11 +6,20 @@ class Admincontroller extends CI_Controller{
     public function __construct(){
         parent::__construct();
 
-        $loggedin = $this->session->userdata('logged-in', 'role');
+        $loggedin = $this->session->userdata('logged-in');
+        $role = $this->session->userdata('role_id');
 
         if(!isset($loggedin) || $loggedin != TRUE){
             //not logged
             redirect('welcome/login');
+        }
+        if ($role != 1){
+            if ($role == 2){
+                redirect('supervisor/supervisorcontroller');
+            }
+            if ($role == 3){
+                redirect('user/usercontroller');
+            }
         }
     }
 
@@ -138,6 +147,13 @@ class Admincontroller extends CI_Controller{
 
     function delete_user(){
         $id = $this->uri->segment(4);
+
+        //verifica che non sia l'utente corrente
+        $user_id = $role = $this->session->userdata('id_user');
+        if($id == $user_id){
+            redirect('admin/admincontroller');
+        }
+
         $user_name = $this->adminmodel->read_user_name($id);
         foreach ($user_name as $un){
             $name = $un->name;
@@ -186,6 +202,13 @@ class Admincontroller extends CI_Controller{
 
     function disable_user(){
         $id = $this->uri->segment(4);
+
+        //verifica che non sia l'utente corrente
+        $user_id = $role = $this->session->userdata('id_user');
+        if($id == $user_id){
+            redirect('admin/admincontroller');
+        }
+
         $user_name = $this->adminmodel->read_user_name($id);
         foreach ($user_name as $un){
             $name = $un->name;
@@ -207,21 +230,5 @@ class Admincontroller extends CI_Controller{
         $this->logsmodel->trace_log($tracelog);
 
         redirect('admin/admincontroller');
-    }
-
-    function logout(){
-        //distrugge sessione
-
-        $tracelog=array(
-            'date' => date ( 'Y-m-d H:i:s'),
-            'username' => $_SESSION['username'],
-            'event_type' => 'User Log out',
-            'event' => 'User is now disconnected'
-        );
-        $this->logsmodel->trace_log($tracelog);
-
-        $this->session->sess_destroy();
-        // reindirizza alla home page
-        $this->load->view('welcome_message');
     }
 }

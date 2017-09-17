@@ -28,7 +28,7 @@ class Logsmodel extends CI_Model{
     }
 
     function clear_all_logs(){
-        //dlete all logs
+        //delete all logs
         $this->db->empty_table('sf_logs');
         $date = date('Y-m-d H:i:s');
         //trace who did it
@@ -43,8 +43,30 @@ class Logsmodel extends CI_Model{
             'event' => $name.' deleted all system logs'
         );
         $this->db->insert('sf_logs', $trace);
-
-        redirect(site_url('admin/maintenancecontroller'));
     }
 
+    function aging_logs(){
+        //ricava la data attuale e quella per il confronto eliminazione
+        $date = date('Y-m-d H:i:s');
+        $old_date = strtotime ( '-1 year' , strtotime ( $date ) );
+        $old_date = date ( 'Y-m-d H:i:s' , $old_date );
+
+        //esegue aging
+        $this->db->where('date <', $old_date);
+        $this->db->delete('sf_logs');
+
+        //recupera i dati per il tracelog
+        $user_name = $this->adminmodel->read_user_name($_SESSION['id_user']);
+        foreach ($user_name as $un){
+            $name = $un->name;
+        }
+
+        $trace=array(
+            'date' => $date,
+            'username' => $_SESSION['username'],
+            'event_type' => 'Logs aging',
+            'event' => 'Aging logs procedure executed by '.$name
+        );
+        $this->db->insert('sf_logs', $trace);
+    }
 }

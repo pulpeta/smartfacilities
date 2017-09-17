@@ -6,20 +6,41 @@ class Maintenancecontroller extends CI_Controller{
     public function __construct(){
         parent::__construct();
 
-        $loggedin = $this->session->userdata('logged-in', 'role');
+        $loggedin = $this->session->userdata('logged-in');
+        $role = $this->session->userdata('role_id');
 
         if(!isset($loggedin) || $loggedin != TRUE){
             //not logged
             redirect('welcome/login');
         }
+        if ($role != 1){
+            if ($role == 2){
+                redirect('supervisor/supervisorcontroller');
+            }
+            if ($role == 3){
+                redirect('user/usercontroller');
+            }
+        }
     }
 
-    public function index(){
+    function index(){
         $this->load->view('admin/maintenance');
-
     }
 
-    function clear_all_logs(){
-        $this->logsmodel->clear_all_logs();
+    function db_optimization (){
+        //ottimizza tutte le tabelle del db
+        $DB = new mysqli ('localhost', 'root', 'root');
+        $dbname = 'smartfacility';
+        $this->maintenancemodel->db_optimization($DB, $dbname);
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'DB Maintenance',
+            'event' => 'DB Optimization task executed'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/maintenancecontroller');
     }
 }
