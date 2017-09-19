@@ -24,11 +24,23 @@ class Plccontroller extends CI_Controller{
     }
 
     function index(){
-        $buildings['buildings'] = $this->plcmodel->list_buildings();
-        $plcs['plcs'] = $this->plcmodel->list_plcs();
-        $functions['functions'] = $this->plcmodel->list_functions();
 
-        $this->load->view('admin/plc', array_merge($plcs, $buildings, $functions));
+        $this->load->view('admin/infrastructure');
+    }
+
+    function indexplc(){
+        $plcs['plcs'] = $this->plcmodel->list_plcs();
+        $this->load->view('admin/indexplc', $plcs);
+    }
+
+    function indexbuilding(){
+        $buildings['buildings'] = $this->plcmodel->list_buildings();
+        $this->load->view('admin/indexbuilding', $buildings);
+    }
+
+    function indexfunctionplc(){
+        $functions['functions'] = $this->plcmodel->list_functions();
+        $this->load->view('admin/indexfunctionplc', $functions);
     }
 
     function new_plc(){
@@ -62,13 +74,37 @@ class Plccontroller extends CI_Controller{
             );
             $this->plcmodel->create_object('sf_plcs', $data);
         }
-        redirect('admin/plccontroller');
+
+        //trace user creation
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'PLC Creation',
+            'event' => 'PLC '.$this->input->post('name'). ' has been created'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexplc');
     }
 
     function delete_plc(){
         $id = $this->uri->segment(4);
+        $plc_name = $this->plcmodel->read_plc_name($id);
+        foreach ($plc_name as $un){
+            $name = $un->name;
+        }
+
         $this->plcmodel->delete_object('sf_plcs','id_plc', $id);
-        redirect('admin/plccontroller');
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'PLC Removed',
+            'event' => 'PLC '.$name .' has been deleted'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexplc');
     }
 
     function edit_plc(){
@@ -104,7 +140,15 @@ class Plccontroller extends CI_Controller{
             );
             $this->plcmodel->update_object('sf_plcs', 'id_plc', $id, $data);
 
-            redirect('admin/plccontroller');
+            $tracelog=array(
+                'date' => date('Y-m-d H:i:s'),
+                'username' => $_SESSION['username'],
+                'event_type' => 'PLC Updated',
+                'event' => 'PLC '.$this->input->post('name'). ' has been updated'
+            );
+            $this->logsmodel->trace_log($tracelog);
+
+            redirect('admin/plccontroller/indexplc');
         }
     }
 
@@ -131,13 +175,36 @@ class Plccontroller extends CI_Controller{
                 );
             $this->plcmodel->create_object('sf_buildings', $data);
         }
-        redirect('admin/plccontroller');
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Building Creation',
+            'event' => 'Building '.$this->input->post('building'). ' has been created'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexbuilding');
     }
 
     function delete_building(){
         $id = $this->uri->segment(4);
+        $building_name = $this->plcmodel->read_building_name($id);
+        foreach ($building_name as $un){
+            $name = $un->building;
+        }
+
         $this->plcmodel->delete_object('sf_buildings','id_building', $id);
-        redirect('admin/plccontroller');
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Building Removed',
+            'event' => 'Building '.$name .' has been deleted'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexbuilding');
     }
 
     function edit_building(){
@@ -165,7 +232,15 @@ class Plccontroller extends CI_Controller{
             );
         $this->plcmodel->update_object('sf_buildings', 'id_building', $id, $data);
 
-        redirect('admin/plccontroller');
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Building Updated',
+            'event' => 'Building '.$this->input->post('building'). ' has been updated'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexbuilding');
     }
 
     function new_function_plc(){
@@ -191,13 +266,36 @@ class Plccontroller extends CI_Controller{
             );
             $this->plcmodel->create_object('sf_functions_plc', $data);
         }
-        redirect('admin/plccontroller');
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Function PLC Creation',
+            'event' => 'Function PLC '.$this->input->post('function_plc'). ' has been created'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexfunctionplc');
     }
 
     function delete_function_plc(){
         $id = $this->uri->segment(4);
+        $function_name = $this->plcmodel->read_function_plc_name($id);
+        foreach ($function_name as $un){
+            $name = $un->function_plc;
+        }
+
         $this->plcmodel->delete_object('sf_functions_plc','id_function_plc', $id);
-        redirect('admin/plccontroller');
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Function PLC Removed',
+            'event' => 'Function PLC '.$name .' has been deleted'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexfunctionplc');
     }
 
     function edit_function_plc(){
@@ -226,7 +324,15 @@ class Plccontroller extends CI_Controller{
         );
         $this->plcmodel->update_object('sf_functions_plc', 'id_function_plc', $id, $data);
 
-        redirect('admin/plccontroller');
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'Function PLC Updated',
+            'event' => 'Function PLC '.$this->input->post('function_plc'). ' has been updated'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        redirect('admin/plccontroller/indexfunctionplc');
     }
 
 }

@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-4"></div>
 
         <div class="col-sm-4">
-            <form class="form-signin" style="border-radius: 20px; background-color: lightgrey ; box-shadow: 10px 10px 5px #888888; padding: 10px 40px 30px 40px;" name="login_form" method="post" action="<?php echo site_url('login/user_login'); ?>">
+            <form class="form-signin" style="border-radius: 20px; background-color: #e3e3e3 ; box-shadow: 10px 10px 5px #888888; padding: 10px 40px 30px 40px;" name="login_form" method="post" action="<?php echo site_url('login/user_login'); ?>">
                 <h2 class="form-signin-heading" align="center" style="margin-bottom: 30px"><span class="glyphicons glyphicons-factory x2"></span><br/>Smart Facility</h2>
                 <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
                 <input type="password" name="password" class="form-control" placeholder="Password"  style="margin-top: 10px" required>

@@ -27,4 +27,38 @@ class Maintenancemodel extends CI_Model{
         $DB->close();
     }
 
+    function db_backup(){
+
+        $data = date('y-m-d');
+        $filename = 'sf_db_bck_'.$data.'.sql';
+
+        $tracelog=array(
+            'date' => date('Y-m-d H:i:s'),
+            'username' => $_SESSION['username'],
+            'event_type' => 'DB Maintenance',
+            'event' => 'DB backup task executed'
+        );
+        $this->logsmodel->trace_log($tracelog);
+
+        // Load the DB utility class
+        $this->load->dbutil();
+
+        // Backup your entire database and assign it to a variable
+        $backup =& $this->dbutil->backup();
+
+        // Load the file helper and write the file to your server
+        $this->load->helper('file');
+        //write_file(FCPATH.'resources/db_bck/'.$filename, $backup);
+        write_file(FCPATH.'resources/db_bck/'.$filename, $backup);
+        // Load the download helper and send the file to your desktop
+        $this->load->helper('download');
+        force_download($filename, $backup);
+    }
+
+    function db_stats(){
+        $link   = mysql_connect('localhost', 'mysql_user', 'mysql_password');
+        $status = explode('  ', mysql_stat($link));
+        print_r($status);
+    }
+
 }

@@ -60,27 +60,50 @@ class Login extends CI_Controller {
                 }
 
             }else{
-                //verifica i tentativi:
-                //verifica se utente è valido
-                //se valido verifica tentativi di logon
-                //se ==4 disabilita l'utente e azzera
-                //se <4 +1
 
-                $tracelog=array(
-                    'date' => $logondate,
-                    'username' => $this->input->post('username'),
-                    'event_type' => 'Failed Logon',
-                    'event' => 'user '.$user->username. ' failed authentication'
-                );
-                $this->logsmodel->trace_log($tracelog);
-                redirect('welcome/login');
+                $failed_user = $this->loginuser->find_user($this->input->post('username'));
+
+                //verifica i tentativi:
+                //foreach ($failed_user as $un){
+                    //$id_user = $un['id_user'];
+                    //$username = $un->username;
+                    //$failure = $un->failed_logon;
+                //}
+
+                //se valido verifica tentativi di logon
+
+                if ($failed_user->failed_logon < 4){
+                    //incrementa di uno il contatore
+                    $this->loginuser->increment_counter($failed_user->id_user, $failed_user->failed_logon);
+
+                    $tracelog=array(
+                        'date' => $logondate,
+                        'username' => $failed_user->username,
+                        'event_type' => 'Failed Logon',
+                        'event' => 'User '.$failed_user->username. ' failed authentication'
+                    );
+                    $this->logsmodel->trace_log($tracelog);
+                    redirect('welcome/login');
+                    }
+                if ($failed_user->failed_logon == 4) {
+                    //se ==4 disabilita l'utente e azzera
+                    $this->loginuser->disable_user($failed_user->id_user);
+
+                    $tracelog = array(
+                        'date' => $logondate,
+                        'username' => $failed_user->username,
+                        'event_type' => 'Failed Logon',
+                        'event' => 'User ' .$failed_user->username. ' disabled due to 5 failed attempts'
+                            );
+                    $this->logsmodel->trace_log($tracelog);
+                    redirect('welcome/login');
+                }
             }
         }
     }
 
     function user_logout(){
         //distrugge sessione
-
         $tracelog=array(
             'date' => date ( 'Y-m-d H:i:s'),
             'username' => $_SESSION['username'],

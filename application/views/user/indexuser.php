@@ -8,7 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>SF - Restricted Area</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
-
 </head>
 <body>
 

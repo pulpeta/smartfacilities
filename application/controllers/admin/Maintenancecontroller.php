@@ -43,4 +43,11 @@ class Maintenancecontroller extends CI_Controller{
 
         redirect('admin/maintenancecontroller');
     }
+
+    function db_backup(){
+        $this->maintenancemodel->db_backup();
+
+        //implementare in futuro l'elenco dei file di backup disponibili
+        redirect('admin/maintenancecontroller');
+    }
 }

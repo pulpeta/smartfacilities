@@ -6,6 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap-theme.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
 
 </head>
@@ -66,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </form>
             <div class="row text-center">
-                <a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
+                <a href="<?php echo site_url('admin/plccontroller/indexplc'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
             </div>
         </div>
         <div class="col-sm-4">

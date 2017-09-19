@@ -5,14 +5,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>SF - Admin Area</title>
+    <title>SF - PLC Management</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap-theme.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
 
 </head>
 <body>
-
 
 
 <div class="container-fluid">
@@ -32,8 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management <span class="sr-only">(current)</span></a></li>
-                    <li><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> Infrastructure Management</a></li>
+                    <li><a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-group"></span> Users Management</a></li>
+                    <li class="active"><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> Infrastructure Management  <span class="sr-only">(current)</span></a></li>
                     <li><a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
                     <li><a href="<?php echo site_url('admin/logscontroller/index'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
                     <li><a href="<?php echo site_url("login/user_logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
@@ -41,86 +40,77 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
     <div class="row text-center">
         <div class="col-sm">
-            <h2 class="text-primary">
-                <span class="glyphicons glyphicons-group"></span>
-                <br/>Users Management</h2>
+            <h2 class="text-primary" style="color: royalblue">
+                <span class="glyphicons glyphicons-robot"></span>
+                <br/>PLC Maintenance
+            </h2>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-1">
+
         </div>
-
         <div class="col-sm-10">
-
-            <a href="<?php echo site_url("admin/admincontroller/new_user"); ?>">
+            <a href="<?php echo site_url("admin/plccontroller/new_plc"); ?>">
                 <h3 class="badge text-primary" style="background-color: green">Add New</h3>
             </a>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Role</th>
-                        <th>User</th>
-                        <th>Last logon</th>
+                        <th>PLC Name</th>
+                        <th>Building</th>
+                        <th>Location</th>
+                        <th>Function</th>
+                        <th>IP Address</th>
+                        <th>Note</th>
                         <th>Manage</th>
                     </tr>
+
                 </thead>
                 <tbody>
-                    <?php foreach ($users as $user): ?>
-                        <tr>
+                    <?php foreach ($plcs as $plc): ?>
+                        <tr class="text-primary">
                             <td>
-                                <?php if (($user->enabled) == 1){
-                                    echo '<p class="text-primary">'.$user->role.'</p>';
-                                }else{
-                                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->role.'</p>';
-                                }
-                                ?>
+                                <strong class="text-uppercase">
+                                    <a href="<?php echo site_url("admin/plccontroller/edit_plc/$plc->id_plc"); ?>" style="text-decoration: none">
+                                        <?php echo $plc->name; ?>
+                                    </a>
+                                </strong>
+                            </td>
                             </td>
                             <td>
-                                <?php if (($user->enabled) == 1){
-                                    echo '<p class="text-primary">'.$user->name . '  -  ' . $user->username . '</p>';
-                                }else{
-                                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->name . '  -  ' . $user->username . '</p>';
-                                }
-                                ?>
+                                <?php echo $plc->building; ?>
                             </td>
                             <td>
-                                <?php
-                                echo "Last logon at: ";
-                                echo $user->lastlogonAt;
-                                ?>
+                                <?php echo $plc->location; ?>
                             </td>
                             <td>
-                                <a href="<?php echo site_url("admin/admincontroller/edit_user/$user->id_user"); ?>">
+                                <?php echo $plc->function_plc; ?>
+                            </td>
+                            <td>
+                                <?php echo $plc->ip_address; ?>
+                            </td>
+                            <td>
+                                <?php echo $plc->note; ?>
+                            </td>
+                            <td>
+                                <a href="<?php echo site_url("admin/plccontroller/edit_plc/$plc->id_plc"); ?>">
                                     <span class="glyphicons glyphicons-pencil" style="color: green"></span></a>
-
-                                <a href="<?php echo site_url("admin/admincontroller/delete_user/$user->id_user"); ?>">
+                                <a href="<?php echo site_url("admin/plccontroller/delete_plc/$plc->id_plc"); ?>">
                                     <span class="glyphicons glyphicons-bin" style="color: red"></span></a>
-
-                                <a href="<?php
-                                if(($user->enabled) == 1){
-                                    echo site_url("admin/admincontroller/disable_user/$user->id_user");
-                                    echo '"><strong><span class="glyphicons glyphicons-thumbs-up" style="color: green"></span></strong></a>';
-                                }else{
-                                    echo site_url("admin/admincontroller/enable_user/$user->id_user");
-                                    echo '"><strong><span class="glyphicons glyphicons-thumbs-down" style="color: gray"></span></strong></a>';
-                                }
-                                ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
-
         <div class="col-sm-1">
-        </div>
 
-        <div class="col-sm-1">
         </div>
     </div>
+
 
     <footer class="panel-footer text-center">
         <p class="text-muted">
