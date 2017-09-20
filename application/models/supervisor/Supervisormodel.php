@@ -19,4 +19,13 @@ class Supervisormodel extends CI_Model{
         return $query;
         }
 
+    function read_single_plc($id){
+        $this->db->select('sf_plcs.id_plc, sf_plcs.name, sf_plcs.temp_min, sf_plcs.temp_max, sf_plcs.hum_min, sf_plcs.hum_max ');
+        $this->db->from('sf_plcs');
+        $this->db->where('sf_plcs.id_plc', $id);
+        $query = $this->db->get()->result();
+
+        return $query;
+    }
+
 }

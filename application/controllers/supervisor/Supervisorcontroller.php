@@ -96,4 +96,14 @@ class Supervisorcontroller extends CI_Controller{
 
         redirect('admin/admincontroller');
     }
+
+    function plc_settings(){
+        $id = $this->uri->segment(4);
+        $plcs['plcs'] = $this->supervisormodel->read_single_plc($id);
+        $this->load->view('supervisor/plc_settings', $plcs);
+    }
+
+    function update_plc(){
+
+    }
 }

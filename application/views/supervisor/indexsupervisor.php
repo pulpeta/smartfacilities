@@ -86,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-                <table class="table table-striped">
+                <table class="table table-striped" style="margin-top: 30px">
                     <thead>
                         <tr>
                             <th>
@@ -132,7 +132,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <?php echo $plc->location; ?>
                                 </td>
                                 <td>
-                                    <a href="" style="text-decoration: none"><?php echo $plc->name; ?></a>
+                                    <strong><a href="<?php
+                                            echo site_url("supervisor/supervisorcontroller/plc_settings/$plc->id_plc");
+                                        ?>" style="text-decoration: none" class="text-uppercase">
+                                        <?php echo $plc->name; ?>
+                                    </a></strong>
                                 </td>
                                 <td>
                                     <?php echo $plc->function_plc; ?>
@@ -153,7 +157,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <?php echo $plc->hum_max; ?>
                                 </td>
                                 <td>
-                                    <span class="glyphicons glyphicons-pen" style="color: green"></span>
+                                    <a href="<?php
+                                    echo site_url("supervisor/supervisorcontroller/plc_settings/$plc->id_plc");
+                                    ?>" <span class="glyphicons glyphicons-pen" style="color: green"></span>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
