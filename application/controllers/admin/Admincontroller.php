@@ -41,7 +41,7 @@ class Admincontroller extends CI_Controller{
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[sf_users.username]');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Password Confirmation', 'trim|required|matches[password]');
 
@@ -55,26 +55,25 @@ class Admincontroller extends CI_Controller{
         //recupera quella vecchia dal db
         $id = $this->input->post('id_user');
         $editdate = date('Y-m-d H:i:s');
-        $old_pw= $this->adminmodel->read_password($id);
         $pw = $this->input->post('confirmpassword');
-        if ($old_pw != $pw) {
+        $old_pws = $this->adminmodel->read_password($id);
+        foreach ($old_pws as $old_pw) {
+            $p = $old_pw->password;
+        }
+
+        if ($p != $pw) {
             //se non coincidono la considera come cambiata e applica ash
-            $pw2save = sha1($pw);
             $date = date('Y-m-d H:i:s');
             $newdate = strtotime ( '+3 month' , strtotime ( $date ) );
             $newdate = date ( 'Y-m-d H:i:s' , $newdate );
             $data=array(
                 'name' => $this->input->post('name'),
                 'username' => $this->input->post('username'),
-                'password' => $pw2save,
+                'password' => $pw,
                 'role_id' => $this->input->post('role_id'),
                 'editedAt' => $editdate,
                 'pwexpireAt' => $newdate
             );
-
-            //TO DO
-            //funzione per aggiornamento scadenza password
-
         }else{
             $data=array(
                 'name' => $this->input->post('name'),
@@ -149,7 +148,7 @@ class Admincontroller extends CI_Controller{
         $id = $this->uri->segment(4);
 
         //verifica che non sia l'utente corrente
-        $user_id = $role = $this->session->userdata('id_user');
+        $user_id = $this->session->userdata('id_user');
         if($id == $user_id){
             redirect('admin/admincontroller');
         }

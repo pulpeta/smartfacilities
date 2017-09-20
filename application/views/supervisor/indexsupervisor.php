@@ -11,12 +11,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-
-
-
 <div class="container-fluid">
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse" style="margin-top: 20px">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -33,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li  class="active">
-                        <a href="<?php echo site_url('')?>">
+                        <a href="<?php echo site_url('supervisor/supervisorcontroller/index')?>">
                             <span class="glyphicons glyphicons-robot"></span><strong>+</strong><span class="glyphicons glyphicons-pencil"></span> Set PLC Settings<span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -43,20 +40,133 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url('')?>">
+                        <a href="<?php echo site_url('supervisor/supervisorcontroller/index')?>">
                             <span class="glyphicons glyphicons-robot"></span></span> PLC Remote management
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url("login/user_logout"); ?>">
-                            <span class="glyphicons glyphicons-log-out"></span> Logout
+                        <a href="<?php echo site_url('supervisor/supervisorcontroller/index')?>">
+                            <span class="glyphicons glyphicons-stats"></span></span> Reports and Charts
                         </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="<?php echo base_url('resources/img/coming.jpg'); ?>" class="img-circle" height="25" width="25">
+                            My Account
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?php
+                                            $id_user = $this->session->userdata('id_user');
+                                            echo site_url("supervisor/supervisorcontroller/edit_profile/$id_user");
+                                        ?>">
+                                    <span class="glyphicons glyphicons-user"></span>
+                                    Edit Profile
+                                </a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
+                                <span class="glyphicons glyphicons-log-out"></span> Logout
+                            </a>
+                        </ul>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <footer class="panel-footer text-center">
+
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h2 style="color: royalblue">
+                <span class="glyphicons glyphicons-robot"></span>+<span class="glyphicons glyphicons-pencil"></span>
+                <br/>Manage PLC Settings
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>
+                                Building
+                            </th>
+                            <th>
+                                Location
+                            </th>
+                            <th>
+                                PLC
+                            </th>
+                            <th>
+                                Function
+                            </th>
+                            <th>
+                                IP Address
+                            </th>
+                            <th>
+                                Min Temp
+                            </th>
+                            <th>
+                                Max Temp
+                            </th>
+                            <th>
+                                Min % Hum
+                            </th>
+                            <th>
+                                Max % Hum
+                            </th>
+                            <th>
+                                Manage
+                            </th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <?php foreach($plcs as $plc): ?>
+                            <tr>
+                                <td>
+                                    <?php echo $plc->building; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->location; ?>
+                                </td>
+                                <td>
+                                    <a href="" style="text-decoration: none"><?php echo $plc->name; ?></a>
+                                </td>
+                                <td>
+                                    <?php echo $plc->function_plc; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->ip_address; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->temp_min; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->temp_max; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->hum_min; ?>
+                                </td>
+                                <td>
+                                    <?php echo $plc->hum_max; ?>
+                                </td>
+                                <td>
+                                    <span class="glyphicons glyphicons-pen" style="color: green"></span>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-1">
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="panel-footer text-center" style="margin-top: 20px">
         <p class="text-muted">
             Smart Facility <span class="glyphicon glyphicon-copyright-mark"></span> Developed by Federico Sibella
         </p>

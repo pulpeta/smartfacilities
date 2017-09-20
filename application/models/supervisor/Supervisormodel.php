@@ -12,11 +12,11 @@ class Supervisormodel extends CI_Model{
         $this->db->where('sf_plcs.building_id = sf_buildings.id_building');
         $this->db->where('sf_plcs.function_plc_id = sf_functions_plc.id_function_plc');
         $this->db->order_by('sf_buildings.building', 'ASC');
+        $this->db->order_by('sf_plcs.location', 'ASC');
         $this->db->order_by('sf_plcs.name', 'ASC');
         $query = $this->db->get()->result();
 
         return $query;
         }
-
 
 }

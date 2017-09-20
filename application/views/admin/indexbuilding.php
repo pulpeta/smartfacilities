@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <div class="container-fluid">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="margin-top: 20px">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,7 +35,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li class="active"><a href="<?php echo site_url('admin/plccontroller/index'); ?>"><span class="glyphicons glyphicons-robot"></span> Infrastructure Management <span class="sr-only">(current)</span></a></li>
                     <li><a href="<?php echo site_url('admin/maintenancecontroller/index'); ?>"><span class="glyphicons glyphicons-wrench"></span> Maintenance</a></li>
                     <li><a href="<?php echo site_url('admin/logscontroller/index'); ?>"><span class="glyphicons glyphicons-note"></span> View System Logs</a></li>
-                    <li><a href="<?php echo site_url("login/user_logout"); ?>"><span class="glyphicons glyphicons-log-out"></span> Logout</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="<?php echo base_url('resources/img/coming.jpg'); ?>" class="img-circle" height="25" width="25">
+                            My Account
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><span class="glyphicons glyphicons-user"></span> Edit Profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
+                                <span class="glyphicons glyphicons-log-out"></span> Logout
+                            </a>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -95,7 +108,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
 
-    <footer class="panel-footer text-center">
+    <footer class="panel-footer text-center" style="margin-top: 20px">
         <p class="text-muted">
             Smart Facility <span class="glyphicon glyphicon-copyright-mark"></span> Developed by Federico Sibella
         </p>

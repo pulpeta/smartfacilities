@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 20px">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
 
-        <footer class="panel-footer">
+        <footer class="panel-footer" style="margin-top: 20px">
             <p class="text-muted text-center">
                 Smart Facility <span class="glyphicons glyphicons-copyright-mark"></span> Developed by Federico Sibella
             </p>
