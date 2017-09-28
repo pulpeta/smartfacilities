@@ -24,7 +24,7 @@ class Adminmodel extends CI_Model
         $this->db->join('sf_roles', 'sf_roles.id_role = sf_users.role_id');
         $this->db->where('sf_users.role_id = sf_roles.id_role');
         $this->db->order_by('sf_roles.id_role', 'ASC');
-        $this->db->order_by('sf_users.name', 'ASC');
+        $this->db->order_by('sf_users.full_name', 'ASC');
         $query = $this->db->get()->result();
 
         return $query;
@@ -40,7 +40,7 @@ class Adminmodel extends CI_Model
     }
 
     function read_user_name($id){
-        $this->db->select('name');
+        $this->db->select('full_name');
         $this->db->from('sf_users');
         $this->db->where('sf_users.id_user', $id);
         $query = $this->db->get()->result();

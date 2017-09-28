@@ -28,26 +28,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php foreach ($users as $user): ?>
                     <input type="hidden" name="id_user" value="<?php echo $user->id_user ?>">
                     <label class="text-primary" style="margin-top: 10px">Name</label>
-                    <input class="form-control" type="text" name="name" value="<?php echo $user->name ?>" required autofocus style="margin-top: 10px">
+                    <input class="form-control" type="text" name="full_name" value="<?php echo $user->full_name ?>" required autofocus style="margin-top: 10px">
                     <label class="text-primary" style="margin-top: 10px">Username</label>
                     <input class="form-control" type="text" name="username" value="<?php echo $user->username ?>" required autofocus style="margin-top: 10px">
                     <label class="text-primary" style="margin-top: 10px">Password</label>
                     <input class="form-control" type="password" name="password"  value="<?php echo $user->password ?>" required autofocus style="margin-top: 10px">
                     <label class="text-primary" style="margin-top: 10px">Confirm password</label>
                     <input class="form-control" type="password" name="confirmpassword"  value="<?php echo $user->password ?>" required autofocus style="margin-top: 10px">
-                    <label class="text-primary" for="selectrole" style="margin-top: 10px">User's Role</label>
-
-                    <select class="form-control" name="role_id" style="margin-top: 10px">
-                        <?php foreach ($roles as $role): ?>
-                            <?php echo '<option value="'.$role->id_role.'" ';
-                                  if($role->id_role == $user->role_id){
-                                    echo 'selected="selected"';
-                                  }
-                                  echo   '>'.$role->role.'</option>'; ?>
-                        <?php endforeach; ?>
-                    </select>
                 <?php endforeach; ?>
-                <div class="row text-center" style="margin-top: 10px">
+                <div class="row text-center" style="margin-top: 30px">
                     <button class="btn btn-lg btn-primary " type="submit">Save</button>
                     <button class="btn btn-lg" type="reset">Reset</button>
                 </div>

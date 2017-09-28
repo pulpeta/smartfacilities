@@ -63,15 +63,6 @@ class Login extends CI_Controller {
 
                 $failed_user = $this->loginuser->find_user($this->input->post('username'));
 
-                //verifica i tentativi:
-                //foreach ($failed_user as $un){
-                    //$id_user = $un['id_user'];
-                    //$username = $un->username;
-                    //$failure = $un->failed_logon;
-                //}
-
-                //se valido verifica tentativi di logon
-
                 if ($failed_user->failed_logon < 4){
                     //incrementa di uno il contatore
                     $this->loginuser->increment_counter($failed_user->id_user, $failed_user->failed_logon);

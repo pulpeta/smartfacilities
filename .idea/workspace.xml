@@ -2,11 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4d6754-e388-4e44-8e87-258490552f50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/supervisor/plc_settings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/supervisor/assignplc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/supervisor/charts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/supervisor/create_assignement.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/supervisor/remotemanagement.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/resetpw.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Login.php" afterPath="$PROJECT_DIR$/application/controllers/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Admincontroller.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Admincontroller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php" afterPath="$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/Adminmodel.php" afterPath="$PROJECT_DIR$/application/models/admin/Adminmodel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/Logsmodel.php" afterPath="$PROJECT_DIR$/application/models/admin/Logsmodel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php" afterPath="$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/create_user.php" afterPath="$PROJECT_DIR$/application/views/admin/create_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/edit_user.php" afterPath="$PROJECT_DIR$/application/views/admin/edit_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/indexadmin.php" afterPath="$PROJECT_DIR$/application/views/admin/indexadmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/indexbuilding.php" afterPath="$PROJECT_DIR$/application/views/admin/indexbuilding.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/indexfunctionplc.php" afterPath="$PROJECT_DIR$/application/views/admin/indexfunctionplc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/indexplc.php" afterPath="$PROJECT_DIR$/application/views/admin/indexplc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/infrastructure.php" afterPath="$PROJECT_DIR$/application/views/admin/infrastructure.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/logs.php" afterPath="$PROJECT_DIR$/application/views/admin/logs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/maintenance.php" afterPath="$PROJECT_DIR$/application/views/admin/maintenance.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" afterPath="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php" afterPath="$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/CodeIgniter.php" afterPath="$PROJECT_DIR$/system/core/CodeIgniter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Loader.php" afterPath="$PROJECT_DIR$/system/core/Loader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_driver.php" afterPath="$PROJECT_DIR$/system/database/DB_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/DB_query_builder.php" afterPath="$PROJECT_DIR$/system/database/DB_query_builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/mssql/mssql_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_result.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" afterPath="$PROJECT_DIR$/system/database/drivers/mysqli/mysqli_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_dblib_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_sqlsrv_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" afterPath="$PROJECT_DIR$/system/database/drivers/sqlsrv/sqlsrv_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Ftp.php" afterPath="$PROJECT_DIR$/system/libraries/Ftp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Image_lib.php" afterPath="$PROJECT_DIR$/system/libraries/Image_lib.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Profiler.php" afterPath="$PROJECT_DIR$/system/libraries/Profiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_memcached_driver.php" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_memcached_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_redis_driver.php" afterPath="$PROJECT_DIR$/system/libraries/Session/drivers/Session_redis_driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Upload.php" afterPath="$PROJECT_DIR$/system/libraries/Upload.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +61,23 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="smartfacility@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="smartfacility@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="smartfacility" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="smartfacility@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="smartfacility" type="e3449647:DbNodeDescriptor" />
+        <item name="sf_plcs" type="e3449647:DbNodeDescriptor" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
@@ -32,9 +85,16 @@
       <file leaf-file-name="Supervisormodel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+              <folding>
+                <element signature="n#read_single_plc#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+                <element signature="n#filter_plc#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+                <element signature="n#list_buildings#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+                <element signature="n#list_users#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+                <element signature="n#list_plcs#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+                <element signature="n#remove_assignement#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,44 +102,77 @@
       <file leaf-file-name="Supervisorcontroller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="230" column="83" lean-forward="false" selection-start-line="230" selection-start-column="83" selection-end-line="230" selection-end-column="83" />
               <folding>
                 <element signature="n#__construct#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
-                <element signature="n#edit_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#index#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
                 <element signature="n#update_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#update_plc#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#remove_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#remote_management#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#reports_charts#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plc_settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/supervisor/plc_settings.php">
+      <file leaf-file-name="create_assignement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/supervisor/create_assignement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="850">
+              <caret line="50" column="101" lean-forward="false" selection-start-line="50" selection-start-column="101" selection-end-line="50" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admincontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Admincontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1156">
+              <caret line="139" column="54" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="54" />
               <folding>
-                <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#index#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#edit_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#update_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#new_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#delete_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#enable_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
+                <element signature="n#disable_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexsupervisor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
+      <file leaf-file-name="Adminmodel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/admin/Adminmodel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="45" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#strong#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#read_roles#0;n#Adminmodel#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assignplc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/supervisor/assignplc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>name</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,11 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/errors/html/new_error_404.php" />
-        <option value="$PROJECT_DIR$/application/views/errors/html/error_404.php" />
-        <option value="$PROJECT_DIR$/application/views/resetpw.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Admin_user.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/admin_user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_plc_function.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="$PROJECT_DIR$/application/models/Model.php" />
@@ -101,42 +189,47 @@
         <option value="$PROJECT_DIR$/application/controllers/Homepage.php" />
         <option value="$PROJECT_DIR$/application/views/general_trends.php" />
         <option value="$PROJECT_DIR$/application/models/Tracelog_model.php" />
-        <option value="$PROJECT_DIR$/application/models/admin/Logsmodel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" />
         <option value="$PROJECT_DIR$/application/views/admin/plc.php" />
         <option value="$PROJECT_DIR$/application/models/Loginuser.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Maintenancecontroller.php" />
         <option value="$PROJECT_DIR$/application/views/user/indexuser.php" />
         <option value="$PROJECT_DIR$/application/controllers/user/Usercontroller.php" />
         <option value="$PROJECT_DIR$/application/models/admin/Maintenancemodel.php" />
         <option value="$PROJECT_DIR$/application/views/login.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_function_plc.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/create_user.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/edit_user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_plc.php" />
         <option value="$PROJECT_DIR$/application/views/admin/edit_plc.php" />
-        <option value="$PROJECT_DIR$/application/models/admin/Plcmodel.php" />
         <option value="$PROJECT_DIR$/application/views/admin/edit_building.php" />
         <option value="$PROJECT_DIR$/application/views/admin/edit_function_plc.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_building.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Plccontroller.php" />
         <option value="$PROJECT_DIR$/resources/db_bck/sf_db_bck_17-09-19.sql" />
         <option value="$PROJECT_DIR$/application/views/welcome_message.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/plc_settings.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/stats.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/remotemanagement.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/charts.php" />
         <option value="$PROJECT_DIR$/application/views/admin/maintenance.php" />
         <option value="$PROJECT_DIR$/application/views/admin/logs.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/infrastructure.php" />
         <option value="$PROJECT_DIR$/application/views/admin/indexplc.php" />
         <option value="$PROJECT_DIR$/application/views/admin/indexfunctionplc.php" />
         <option value="$PROJECT_DIR$/application/views/admin/indexbuilding.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/indexadmin.php" />
-        <option value="$PROJECT_DIR$/application/config/autoload.php" />
-        <option value="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
+        <option value="$PROJECT_DIR$/application/models/admin/Plcmodel.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Plccontroller.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
         <option value="$PROJECT_DIR$/application/models/admin/Adminmodel.php" />
+        <option value="$PROJECT_DIR$/application/models/admin/Logsmodel.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/edit_user.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/indexadmin.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/create_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Admincontroller.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/infrastructure.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/assignplc.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/create_assignement.php" />
         <option value="$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php" />
-        <option value="$PROJECT_DIR$/application/views/supervisor/plc_settings.php" />
-        <option value="$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php" />
         <option value="$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php" />
       </list>
     </option>
@@ -148,11 +241,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="206" />
+    <option name="y" value="136" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -172,7 +265,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,56 +277,19 @@
               <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
-              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -324,19 +379,28 @@
       <workItem from="1505801692768" duration="21213000" />
       <workItem from="1505886832686" duration="18340000" />
       <workItem from="1505935526416" duration="5798000" />
+      <workItem from="1505974041313" duration="23789000" />
+      <workItem from="1506059327582" duration="12581000" />
+      <workItem from="1506190764944" duration="3246000" />
+      <workItem from="1506242166313" duration="3791000" />
+      <workItem from="1506270075947" duration="25000" />
+      <workItem from="1506270150372" duration="2973000" />
+      <workItem from="1506323772143" duration="23071000" />
+      <workItem from="1506406985141" duration="16640000" />
+      <workItem from="1506578467704" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359111000" />
+    <option name="totallyTimeSpent" value="445250000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="206" y="136" width="1382" height="744" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20196672" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21785174" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -363,9 +427,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15671642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21481876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -381,116 +445,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="30" />
+      <option name="time" value="36" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/errors/cli/error_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/errors/html/error_db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="84" column="4" lean-forward="false" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Tracelog_model.php" />
-    <entry file="file://$PROJECT_DIR$/application/models/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Logscontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding>
-            <element signature="n#__construct#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#index#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#export_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#clear_all_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#aging_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <marker date="1505672594522" expanded="true" signature="2115:2167" ph="..." />
-            <marker date="1505672594522" expanded="true" signature="2243:2260" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/Logsmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Maintenancecontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding>
-            <element signature="n#__construct#0;n#Maintenancecontroller#0;n#!!top" expanded="false" />
-            <element signature="n#index#0;n#Maintenancecontroller#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/indexuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="118" lean-forward="false" selection-start-line="9" selection-start-column="118" selection-end-line="9" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/user/Usercontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4012">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/Maintenancemodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -498,15 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/resetpw.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,9 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding>
-            <marker date="1505315065398" expanded="true" signature="2700:2714" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -524,143 +475,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/create_function_plc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/create_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/create_plc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_plc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="69" column="74" lean-forward="false" selection-start-line="69" selection-start-column="74" selection-end-line="69" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/create_building.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="79" lean-forward="false" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_building.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_function_plc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="41" column="82" lean-forward="false" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/db_bck/sf_db_bck_17-09-19.sql" />
     <entry file="file://$PROJECT_DIR$/resources/db_bck/sf_db_bck_17-09-18.sql" />
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Plccontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          <folding>
-            <element signature="n#__construct#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#indexplc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#indexbuilding#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#indexfunctionplc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#new_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#create_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#delete_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#edit_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#update_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#new_building#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#create_building#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#delete_building#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#edit_building#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#update_building#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#new_function_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#create_function_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#delete_function_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#edit_function_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-            <element signature="n#update_function_plc#0;n#Plccontroller#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/maintenance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="113" column="69" lean-forward="false" selection-start-line="113" selection-start-column="69" selection-end-line="113" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/logs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="131" column="69" lean-forward="false" selection-start-line="131" selection-start-column="69" selection-end-line="131" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/indexplc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="127" column="69" lean-forward="false" selection-start-line="127" selection-start-column="69" selection-end-line="127" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/indexfunctionplc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="110" column="69" lean-forward="false" selection-start-line="110" selection-start-column="69" selection-end-line="110" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/img/profiles/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -675,30 +494,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Loginuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="91" lean-forward="false" selection-start-line="19" selection-start-column="91" selection-end-line="19" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="99" column="17" lean-forward="true" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-          <folding>
-            <element signature="e#1690#1826#0#PHP" expanded="false" />
-            <element signature="e#1844#1987#0#PHP" expanded="false" />
-            <element signature="e#2005#2130#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,125 +508,314 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3e889ef7-8d54-4ff9-9181-a97da8b43bd2/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/390f45b5/3e889ef7-8d54-4ff9-9181-a97da8b43bd2/smartfacility.sf_plcs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/Logsmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="87" column="30" lean-forward="false" selection-start-line="87" selection-start-column="30" selection-end-line="87" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/Maintenancemodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="50" column="8" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/Plcmodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="88" column="26" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-349">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Loginuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="23" column="61" lean-forward="true" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/create_building.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="36" column="79" lean-forward="false" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/create_function_plc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_building.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/indexplc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/infrastructure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+        <state relative-caret-position="334">
+          <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/logs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-652">
+          <caret line="80" column="55" lean-forward="true" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/maintenance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_function_plc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="41" column="82" lean-forward="false" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_plc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-238">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/edit_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="30" column="71" lean-forward="false" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/indexbuilding.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/indexfunctionplc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/charts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1606">
+          <caret line="96" column="16" lean-forward="false" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/edit_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="30" column="107" lean-forward="false" selection-start-line="30" selection-start-column="107" selection-end-line="30" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1281">
+          <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/plc_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="41" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/remotemanagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-621">
+          <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/resetpw.php" />
+    <entry file="file://$PROJECT_DIR$/application/views/welcome_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="12" column="57" lean-forward="false" selection-start-line="12" selection-start-column="57" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Maintenancecontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Plccontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="839">
+          <caret line="328" column="21" lean-forward="false" selection-start-line="328" selection-start-column="17" selection-end-line="328" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Logscontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/create_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/indexadmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="76" column="40" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/create_plc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="60" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/assignplc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/admin/Adminmodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/indexbuilding.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="63" lean-forward="true" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/supervisor/edit_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="71" lean-forward="true" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/indexadmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="108" column="41" lean-forward="false" selection-start-line="108" selection-start-column="41" selection-end-line="108" selection-end-column="114" />
+        <state relative-caret-position="153">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="45" />
           <folding>
-            <marker date="1505890965056" expanded="true" signature="4667:4696" ph="..." />
-            <marker date="1505890965056" expanded="true" signature="5150:5179" ph="..." />
-            <marker date="1505890965056" expanded="true" signature="6394:6406" ph="..." />
-            <marker date="1505890965056" expanded="true" signature="6680:6691" ph="..." />
+            <element signature="n#read_roles#0;n#Adminmodel#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/create_assignement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="101" lean-forward="false" selection-start-line="50" selection-start-column="101" selection-end-line="50" selection-end-column="101" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/Admincontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" column="74" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="74" />
+        <state relative-caret-position="1156">
+          <caret line="139" column="54" lean-forward="true" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="54" />
           <folding>
-            <element signature="n#__construct#0;n#Admincontroller#0;n#!!top" expanded="false" />
+            <element signature="n#index#0;n#Admincontroller#0;n#!!top" expanded="false" />
+            <element signature="n#edit_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
             <element signature="n#update_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
             <element signature="n#new_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
-            <element signature="n#create_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
             <element signature="n#delete_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
-            <element signature="e#5702#5833#0#PHP" expanded="false" />
             <element signature="n#enable_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
             <element signature="n#disable_user#0;n#Admincontroller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/admin/Plcmodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="63" selection-end-column="44" />
-          <folding>
-            <element signature="n#list_plcs#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#list_buildings#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#list_functions#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#create_object#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#delete_object#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#update_object#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#read_building#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#read_function#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#read_plc_name#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#read_building_name#0;n#Plcmodel#0;n#!!top" expanded="false" />
-            <element signature="n#read_function_plc_name#0;n#Plcmodel#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+        <state relative-caret-position="408">
+          <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#strong#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/supervisor/plc_settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#read_single_plc#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+            <element signature="n#filter_plc#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+            <element signature="n#list_buildings#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+            <element signature="n#list_users#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+            <element signature="n#list_plcs#0;n#Supervisormodel#0;n#!!top" expanded="false" />
+            <element signature="n#remove_assignement#0;n#Supervisormodel#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="230" column="83" lean-forward="false" selection-start-line="230" selection-start-column="83" selection-end-line="230" selection-end-column="83" />
           <folding>
             <element signature="n#__construct#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
-            <element signature="n#edit_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#index#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
             <element signature="n#update_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#update_plc#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#remove_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#remote_management#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#reports_charts#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

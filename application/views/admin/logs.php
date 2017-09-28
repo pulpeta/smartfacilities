@@ -14,6 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <div class="container-fluid">
+
     <nav class="navbar navbar-default" style="margin-top: 20px">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -41,7 +42,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicons glyphicons-user"></span> Edit Profile</a></li>
+                            <li><a href="<?php
+                                $id_user = $this->session->userdata('id_user');
+                                echo site_url("admin/admincontroller/edit_user/$id_user");
+                                ?>"><span class="glyphicons glyphicons-user"></span> Edit Profile
+                                </a>
+                            </li>
                             <li role="separator" class="divider"></li>
                             <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
                                 <span class="glyphicons glyphicons-log-out"></span> Logout
@@ -65,21 +71,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="col-sm-2">
             <p><a class="badge" href="<?php echo site_url('admin/logscontroller/export_logs')?>" style="background-color: green">Export csv</a></p>
             <p><a class="badge" href="<?php echo site_url('admin/logscontroller/clear_all_logs')?>" style="background-color: red">Clear all Logs</a></p>
-            <p><a class="badge" href="<?php echo site_url('admin/logscontroller/aging_logs')?>" style="background-color: orange">Delete Logs 1yo</a></p>
+            <p><a class="badge" href="<?php echo site_url('admin/logscontroller/aging_logs')?>" style="background-color: orange">Delete Logs 1 yo</a></p>
         </div>
         <div class="col-sm-8">
-            <h4>Filter options:</h4>
-            <ul class="list-inline text-muted">
-                <li>
-                    <strong>Username: </strong>
+            <form class="form-group" name="log_filters" method="post" action="<?php echo site_url('admin/logscontroller/index'); ?>">
 
-                </li>
-                <li>
-                    <strong>Event type: </strong>
+                <select name="s_users" class="form-control-static" style="border-radius: 5px">
+                    <option value="">all users</option>
+                    <?php foreach ($users as $user): ?>
+                        <?php echo '<option value="'.$user->username.'">'.$user->username.'</option>'; ?>
+                    <?php endforeach; ?>
+                </select>
+                <select name="s_types" class="form-control-static" style="margin-left: 20px; border-radius: 5px">
+                    <option value="">all events</option>
+                    <?php foreach ($types as $type): ?>
+                        <?php echo '<option value="'.$type->event_type.'">'.$type->event_type.'</option>'; ?>
+                    <?php endforeach; ?>
+                </select>
+                <br/>
+                <button class="btn btn-primary" style="margin-top: 10px">Filter</button>
 
-                </li>
-            </ul>
-            <a href="" class="badge" style="background-color: orange">Apply Filter</a>
+            </form>
         </div>
         <div class="col-sm-1">
 

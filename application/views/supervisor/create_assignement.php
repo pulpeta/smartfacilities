@@ -16,7 +16,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="row text-center">
         <div class="col-sm">
-            <h2 class="text-primary"><span class="glyphicons glyphicons-user-add"></span> New User</h2>
+            <h2 class="text-primary" style="color: orange">
+                <span class="glyphicons glyphicons-user"></span>+<span class="glyphicons glyphicons-robot"></span>
+                <br/>New PLC Assignement
+            </h2>
         </div>
     </div>
     <div class="row">
@@ -24,16 +27,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <div class="col-sm-4">
-            <form class="form-group" name="edituser_form" method="post" action="<?php echo site_url('admin/admincontroller/create_user'); ?>">
-                <input class="form-control" type="text" name="full_name" placeholder="Name" required autofocus style="margin-top: 10px">
-                <input class="form-control" type="text" name="username" placeholder="Username" required autofocus style="margin-top: 10px">
-                <input class="form-control" type="password" name="password"  placeholder="Password" required autofocus style="margin-top: 10px">
-                <input class="form-control" type="password" name="confirmpassword"  placeholder="Confirm password" required autofocus style="margin-top: 10px">
-                <label class="text-primary" for="selectrole" style="margin-top: 10px">User's Role</label>
+            <form class="form-group" name="assignement_form" method="post" action="<?php echo site_url('supervisor/supervisorcontroller/create_assignement'); ?>">
 
-                <select class="form-control" name="role_id" style="margin-top: 10px">
-                    <?php foreach ($roles as $role): ?>
-                        <?php echo '<option value="'.$role->id_role.'">'.$role->role.'</option>'; ?>
+                <label class="text-primary" style="margin-top: 20px">Select User</label>
+                <select class="form-control" name="user" style="margin-top: 10px">
+                    <?php foreach ($users as $user): ?>
+                        <?php echo '<option value="'.$user->id_user.'">'.$user->full_name.'</option>'; ?>
+                    <?php endforeach; ?>
+                </select>
+                <label class="text-primary" style="margin-top: 20px">Select PLC</label>
+                <select class="form-control" name="plc" style="margin-top: 10px">
+                    <?php foreach ($plcs as $plc): ?>
+                        <?php echo '<option value="'.$plc->id_plc.'">'.$plc->name.' ('.$plc->location.')</option>'; ?>
                     <?php endforeach; ?>
                 </select>
 
@@ -43,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </form>
             <div class="row text-center">
-                <a href="<?php echo site_url('admin/admincontroller/index'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
+                <a href="<?php echo site_url('supervisor/supervisorcontroller/manage_plc_assignement'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
             </div>
         </div>
         <div class="col-sm-4">

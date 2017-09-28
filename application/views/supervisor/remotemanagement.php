@@ -29,9 +29,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li  class="active">
+                    <li>
                         <a href="<?php echo site_url('supervisor/supervisorcontroller/index')?>">
-                            <span class="glyphicons glyphicons-robot"></span><strong>+</strong><span class="glyphicons glyphicons-pencil"></span> Set PLC Settings<span class="sr-only">(current)</span>
+                            <span class="glyphicons glyphicons-robot"></span><strong>+</strong><span class="glyphicons glyphicons-pencil"></span> Set PLC Settings
                         </a>
                     </li>
                     <li>
@@ -39,9 +39,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="glyphicons glyphicons-user"></span><strong>+</strong><span class="glyphicons glyphicons-robot"></span> Assign PLC
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="<?php echo site_url('supervisor/supervisorcontroller/remote_management')?>">
-                            <span class="glyphicons glyphicons-laptop"></span>+<span class="glyphicons glyphicons-robot"></span></span> PLC Remote management
+                            <span class="glyphicons glyphicons-laptop"></span>+<span class="glyphicons glyphicons-robot"></span></span> PLC Remote management<span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li>
@@ -78,15 +78,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="container-fluid">
         <div class="row text-center">
-            <h2 style="color: royalblue">
-                <span class="glyphicons glyphicons-robot"></span>+<span class="glyphicons glyphicons-pencil"></span>
-                <br/>Manage PLC Settings
+            <h2 style="color: green">
+                <span class="glyphicons glyphicons-laptop"></span>+<span class="glyphicons glyphicons-robot"></span>
+                <br/>Remote Management
             </h2>
         </div>
         <div class="row" style="margin-top: 30px">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-                <form class="form-group" name="filter_buildings" method="post" action="<?php echo site_url('supervisor/supervisorcontroller/index'); ?>">
+                <form class="form-group" name="filter_buildings" method="post" action="<?php echo site_url('supervisor/supervisorcontroller/remote_management'); ?>">
                     <select name="buildings" class="form-control-static" style="border-radius: 5px; margin-right: 10px">
                         <option value="0">all buildings</option>
                         <?php foreach ($buildings as $building): ?>
@@ -103,81 +103,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-10">
                 <table class="table table-striped" style="margin-top: 30px">
                     <thead>
-                        <tr>
-                            <th>
-                                Building
-                            </th>
-                            <th>
-                                Location
-                            </th>
-                            <th>
-                                PLC
-                            </th>
-                            <th>
-                                Function
-                            </th>
-                            <th>
-                                IP Address
-                            </th>
-                            <th>
-                                Min Temp
-                            </th>
-                            <th>
-                                Max Temp
-                            </th>
-                            <th>
-                                Min % Hum
-                            </th>
-                            <th>
-                                Max % Hum
-                            </th>
-                            <th>
-                                Manage
-                            </th>
-                        </tr>
+                    <tr>
+                        <th>
+                            Building
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            PLC
+                        </th>
+                        <th>
+                            Function
+                        </th>
+                    </tr>
 
                     </thead>
                     <tbody>
-                        <?php foreach($plcs as $plc): ?>
-                            <tr>
-                                <td>
-                                    <?php echo $plc->building; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->location; ?>
-                                </td>
-                                <td>
-                                    <strong><a href="<?php
-                                            echo site_url("supervisor/supervisorcontroller/plc_settings/$plc->id_plc");
-                                        ?>" style="text-decoration: none" class="text-uppercase">
+                    <?php foreach($plcs as $plc): ?>
+                        <tr>
+                            <td>
+                                <?php echo $plc->building; ?>
+                            </td>
+                            <td>
+                                <?php echo $plc->location; ?>
+                            </td>
+                            <td>
+                                <strong><a href="<?php
+                                    echo site_url("supervisor/supervisorcontroller/manage_plc/$plc->id_plc");
+                                    ?>" style="text-decoration: none" class="text-uppercase">
                                         <?php echo $plc->name; ?>
                                     </a></strong>
-                                </td>
-                                <td>
-                                    <?php echo $plc->function_plc; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->ip_address; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->temp_min; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->temp_max; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->hum_min; ?>
-                                </td>
-                                <td>
-                                    <?php echo $plc->hum_max; ?>
-                                </td>
-                                <td>
-                                    <a href="<?php
-                                    echo site_url("supervisor/supervisorcontroller/plc_settings/$plc->id_plc");
-                                    ?>" <span class="glyphicons glyphicons-pen" style="color: green"></span>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
+                            </td>
+                            <td>
+                                <?php echo $plc->function_plc; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

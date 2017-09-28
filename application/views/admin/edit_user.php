@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php foreach ($users as $user): ?>
                     <input type="hidden" name="id_user" value="<?php echo $user->id_user ?>">
                     <label class="text-primary" style="margin-top: 10px">Name</label>
-                    <input class="form-control" type="text" name="name" value="<?php echo $user->name ?>" required autofocus style="margin-top: 10px">
+                    <input class="form-control" type="text" name="full_name" value="<?php echo $user->full_name ?>" required autofocus style="margin-top: 10px">
                     <label class="text-primary" style="margin-top: 10px">Username</label>
                     <input class="form-control" type="text" name="username" value="<?php echo $user->username ?>" required autofocus style="margin-top: 10px">
                     <label class="text-primary" style="margin-top: 10px">Password</label>

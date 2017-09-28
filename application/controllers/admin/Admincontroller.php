@@ -40,7 +40,7 @@ class Admincontroller extends CI_Controller{
 
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('full_name', 'Full_Name', 'trim|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Password Confirmation', 'trim|required|matches[password]');
@@ -67,7 +67,7 @@ class Admincontroller extends CI_Controller{
             $newdate = strtotime ( '+3 month' , strtotime ( $date ) );
             $newdate = date ( 'Y-m-d H:i:s' , $newdate );
             $data=array(
-                'name' => $this->input->post('name'),
+                'full_name' => $this->input->post('full_name'),
                 'username' => $this->input->post('username'),
                 'password' => $pw,
                 'role_id' => $this->input->post('role_id'),
@@ -76,7 +76,7 @@ class Admincontroller extends CI_Controller{
             );
         }else{
             $data=array(
-                'name' => $this->input->post('name'),
+                'full_name' => $this->input->post('full_name'),
                 'username' => $this->input->post('username'),
                 'editedAt' => $editdate,
                 'role_id' => $this->input->post('role_id')
@@ -90,7 +90,7 @@ class Admincontroller extends CI_Controller{
             'date' => $editdate,
             'username' => $_SESSION['username'],
             'event_type' => 'User Updated',
-            'event' => $this->input->post('name'). ' has been updated'
+            'event' => $this->input->post('full_name'). ' has been updated'
         );
         $this->logsmodel->trace_log($tracelog);
 
@@ -105,7 +105,7 @@ class Admincontroller extends CI_Controller{
     function create_user(){
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('full_name', 'Full_Name', 'trim|required');
         $this->form_validation->set_rules('username', 'Username', 'trim|required|is_unique[sf_users.username]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[8]');
         $this->form_validation->set_rules('confirmpassword', 'Password Confirmation', 'trim|required|matches[password]');
@@ -121,7 +121,7 @@ class Admincontroller extends CI_Controller{
                 $cpw = sha1($pw);
                 //TO DO funzione scadenza password
                 $data=array(
-                    'name' => $this->input->post('name'),
+                    'full_name' => $this->input->post('full_name'),
                     'username' => $this->input->post('username'),
                     'password' => $cpw,
                     'role_id' => $this->input->post('role_id'),
@@ -137,7 +137,7 @@ class Admincontroller extends CI_Controller{
             'date' => $creationdate,
             'username' => $_SESSION['username'],
             'event_type' => 'User Creation',
-            'event' => $this->input->post('name'). ' has been created'
+            'event' => $this->input->post('full_name'). ' has been created'
         );
         $this->logsmodel->trace_log($tracelog);
 
@@ -155,7 +155,7 @@ class Admincontroller extends CI_Controller{
 
         $user_name = $this->adminmodel->read_user_name($id);
         foreach ($user_name as $un){
-            $name = $un->name;
+            $name = $un->full_name;
         }
 
         if ($id != 1){
@@ -178,7 +178,7 @@ class Admincontroller extends CI_Controller{
         $id = $this->uri->segment(4);
         $user_name = $this->adminmodel->read_user_name($id);
         foreach ($user_name as $un){
-            $name = $un->name;
+            $name = $un->full_name;
         }
         $editdate=date('Y-m-d H:i:s');
 
@@ -210,7 +210,7 @@ class Admincontroller extends CI_Controller{
 
         $user_name = $this->adminmodel->read_user_name($id);
         foreach ($user_name as $un){
-            $name = $un->name;
+            $name = $un->full_name;
         }
         $editdate=date('Y-m-d H:i:s');
 

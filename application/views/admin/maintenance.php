@@ -56,7 +56,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicons glyphicons-user"></span> Edit Profile</a></li>
+                            <li><a href="<?php
+                                $id_user = $this->session->userdata('id_user');
+                                echo site_url("admin/admincontroller/edit_user/$id_user");
+                                ?>"><span class="glyphicons glyphicons-user"></span> Edit Profile
+                                </a>
+                            </li>
                             <li role="separator" class="divider"></li>
                             <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
                                 <span class="glyphicons glyphicons-log-out"></span> Logout
@@ -98,11 +103,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </h3>
                 </div>
                 <div class="col-xs-4">
-                    <h3 class="text-center text-primary"><span class="glyphicons glyphicons-stats"></span> Stats</h3>
-                    <h2 style="color: orange" class="text-center">
+                    <h2 class="text-center text-primary"><span class="glyphicons glyphicons-stats"></span>DB Stats</h2>
+                    <h3 style="color: orange" class="text-center">
                         Coming soon<br/>
                         <span class="glyphicons glyphicons-stats x4"></span>
-                    </h2>
+                    </h3>
                 </div>
             </div>
         </div>

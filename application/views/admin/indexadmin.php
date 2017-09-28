@@ -43,7 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicons glyphicons-user"></span> Edit Profile</a></li>
+                            <li><a href="<?php
+                                            $id_user = $this->session->userdata('id_user');
+                                            echo site_url("admin/admincontroller/edit_user/$id_user");
+                                         ?>"><span class="glyphicons glyphicons-user"></span> Edit Profile
+                                </a>
+                            </li>
                             <li role="separator" class="divider"></li>
                             <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
                                 <span class="glyphicons glyphicons-log-out"></span> Logout
@@ -93,9 +98,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </td>
                             <td>
                                 <?php if (($user->enabled) == 1){
-                                    echo '<p class="text-primary">'.$user->name . '  -  ' . $user->username . '</p>';
+                                    echo '<p class="text-primary">'.$user->full_name . '  -  ' . $user->username . '</p>';
                                 }else{
-                                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->name . '  -  ' . $user->username . '</p>';
+                                    echo '<p class="text-muted" style="text-decoration: line-through">'.$user->full_name . '  -  ' . $user->username . '</p>';
                                 }
                                 ?>
                             </td>

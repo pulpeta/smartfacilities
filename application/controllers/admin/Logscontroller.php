@@ -24,8 +24,20 @@ class Logscontroller extends CI_Controller{
     }
 
     function index(){
-        $logs['logs'] = $this->logsmodel->list_logs();
-        $this->load->view('admin/logs', $logs);
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('users', 'users', 'trim');
+        $this->form_validation->set_rules('types', 'types', 'trim');
+
+        $users['users'] = $this->logsmodel->list_users();
+        $types ['types'] = $this->logsmodel->list_types();
+
+        $user = $this->input->post('s_users');
+        $type = $this->input->post('s_types');
+
+        $logs['logs'] = $this->logsmodel->list_logs($user, $type);
+
+        $this->load->view('admin/logs', array_merge($logs, $users, $types));
     }
 
     function export_logs(){
