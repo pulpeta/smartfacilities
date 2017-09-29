@@ -30,7 +30,7 @@ class Logscontroller extends CI_Controller{
         $type = $this->input->post('s_types');
         $user = $this->input->post('s_users');
         $logs['logs'] = $this->logsmodel->list_logs($user, $type);
-        
+
         $this->load->view('admin/logs', array_merge($logs, $users, $types));
 
     }
