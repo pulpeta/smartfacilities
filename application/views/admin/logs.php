@@ -133,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <?php echo $log->event; ?>
                             </td>
                         </tr>
-                    <?endforeach; ?>
+                    <? endforeach; ?>
                 </tbody>
             </table>
         </div>

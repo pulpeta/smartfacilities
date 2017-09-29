@@ -25,19 +25,66 @@ class Logscontroller extends CI_Controller{
 
     function index(){
 
+        $users['users'] = $this->logsmodel->list_users();
+        $types ['types'] = $this->logsmodel->list_types();
+        $type = $this->input->post('s_types');
+        $user = $this->input->post('s_users');
+        $logs['logs'] = $this->logsmodel->list_logs($user, $type);
+        
+        $this->load->view('admin/logs', array_merge($logs, $users, $types));
+
+    }
+
+    function search(){
+        /**
+        $users['users'] = $this->logsmodel->list_users();
+        $types ['types'] = $this->logsmodel->list_types();
+
         $this->load->library('form_validation');
         $this->form_validation->set_rules('users', 'users', 'trim');
         $this->form_validation->set_rules('types', 'types', 'trim');
 
-        $users['users'] = $this->logsmodel->list_users();
-        $types ['types'] = $this->logsmodel->list_types();
+        $search = ($this->input->post('s_users'))? $this->input->post('s_users'): "";
+        //$search = ($this->input->post('s_types'))? $this->input->post('S_typer'): "";
+        //$type = $this->input->post('s_types');
+        $search = ($this->uri->segment(4)) ? $this->uri->segment(4) : $search;
 
-        $user = $this->input->post('s_users');
-        $type = $this->input->post('s_types');
+        $config = array();
+        $config["base_url"] = base_url() . "index.php/admin/logscontroller/search/$search";
+        $config['total_rows'] = $this->logsmodel->logs_count($this->input->post('s_users'), NULL);
+        $config["per_page"] = 10;
+        $config["uri_segment"] = 5;
+        $choice = $config["total_rows"]/$config["per_page"];
+        $config["num_links"] = floor($choice);
+        print_r($config["num_links"]);
+        // integrate bootstrap pagination
+        $config['full_tag_open'] = '<ul class="pagination pagination-lg">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_link'] = false;
+        $config['last_link'] = false;
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['prev_link'] = '«';
+        $config['prev_tag_open'] = '<li class="prev">';
+        $config['prev_tag_close'] = '</li>';
+        $config['next_link'] = '»';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $this->pagination->initialize($config);
 
-        $logs['logs'] = $this->logsmodel->list_logs($user, $type);
+        $page = ($this->uri->segment(5)) ? $this->uri->segment(5) : 0;
+        $logs['logs'] = $this->logsmodel->list_logs($search, NULL, $config["per_page"], $page);
+        $logs['links'] = $this->pagination->create_links();
+        print_r($logs['links']);
 
-        $this->load->view('admin/logs', array_merge($logs, $users, $types));
+        $this->load->view('admin/logs_paginated', array_merge($logs, $users, $types));
+         **/
     }
 
     function export_logs(){
