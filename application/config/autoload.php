@@ -145,5 +145,6 @@ $autoload['model'] = array(
     'admin/logsmodel',
     'admin/plcmodel',
     'admin/maintenancemodel',
-    'supervisor/supervisormodel'
+    'supervisor/supervisormodel',
+    'user/usermodel'
 );

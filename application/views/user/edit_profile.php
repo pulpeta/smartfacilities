@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
         <div class="col-sm-4">
-            <form class="form-group" name="edituser_form" method="post" action="<?php echo site_url('supervisor/supervisorcontroller/update_profile'); ?>">
+            <form class="form-group" name="edituser_form" method="post" action="<?php echo site_url('user/usercontroller/update_profile'); ?>">
                 <?php foreach ($users as $user): ?>
                     <input type="hidden" name="id_user" value="<?php echo $user->id_user ?>">
                     <label class="text-primary" style="margin-top: 10px">Name</label>
@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </form>
             <div class="row text-center">
-                <a href="<?php echo site_url('supervisor/supervisorcontroller'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
+                <a href="<?php echo site_url('user/usercontroller'); ?>"><span class="glyphicons glyphicons-arrow-left x2"></span></a>
             </div>
         </div>
         <div class="col-sm-4">

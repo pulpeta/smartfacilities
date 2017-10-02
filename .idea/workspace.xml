@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4d6754-e388-4e44-8e87-258490552f50" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/user/Usermodel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/edit_profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/Logsmodel.php" afterPath="$PROJECT_DIR$/application/models/admin/Logsmodel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/logs.php" afterPath="$PROJECT_DIR$/application/views/admin/logs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/Usercontroller.php" afterPath="$PROJECT_DIR$/application/controllers/user/Usercontroller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" afterPath="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/indexuser.php" afterPath="$PROJECT_DIR$/application/views/user/indexuser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,54 +47,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Logscontroller.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Logscontroller.php">
+      <file leaf-file-name="Usercontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/user/Usercontroller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="748">
+              <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding>
-                <element signature="n#__construct#0;n#Logscontroller#0;n#!!top" expanded="false" />
-                <element signature="n#search#0;n#Logscontroller#0;n#!!top" expanded="false" />
-                <element signature="n#export_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-                <element signature="n#clear_all_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-                <element signature="n#aging_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-                <marker date="1506697475780" expanded="true" signature="4748:4800" ph="..." />
-                <marker date="1506697475780" expanded="true" signature="4876:4893" ph="..." />
+                <element signature="n#edit_profile#0;n#Usercontroller#0;n#!!top" expanded="false" />
+                <element signature="n#update_profile#0;n#Usercontroller#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Logsmodel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/admin/Logsmodel.php">
+      <file leaf-file-name="Usermodel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/user/Usermodel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+            <state relative-caret-position="306">
+              <caret line="18" column="73" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
               <folding>
-                <element signature="n#logs_count#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#fetch_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#list_users#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#list_types#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#show_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#trace_log#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#clear_all_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-                <element signature="n#aging_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
+                <element signature="n#list_buildings#0;n#Usermodel#0;n#!!top" expanded="false" />
+                <element signature="n#get_user#0;n#Usermodel#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/logs.php">
+      <file leaf-file-name="Supervisormodel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="135" column="37" lean-forward="false" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+            <state relative-caret-position="476">
+              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Supervisorcontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1564">
+              <caret line="222" column="39" lean-forward="false" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="55" />
+              <folding>
+                <element signature="n#update_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#plc_settings#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#update_plc#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#manage_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#new_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#remove_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#remote_management#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+                <element signature="n#reports_charts#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexuser.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/user/indexuser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="133" column="50" lean-forward="false" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexsupervisor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1360">
+              <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -105,9 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/models/Model.php" />
-        <option value="$PROJECT_DIR$/application/views/homepage.php" />
         <option value="$PROJECT_DIR$/application/models/Login.php" />
         <option value="$PROJECT_DIR$/application/controllers/Welcome.php" />
         <option value="$PROJECT_DIR$/application/controllers/Homepage.php" />
@@ -116,8 +150,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/plc.php" />
         <option value="$PROJECT_DIR$/application/models/Loginuser.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Maintenancecontroller.php" />
-        <option value="$PROJECT_DIR$/application/views/user/indexuser.php" />
-        <option value="$PROJECT_DIR$/application/controllers/user/Usercontroller.php" />
         <option value="$PROJECT_DIR$/application/models/admin/Maintenancemodel.php" />
         <option value="$PROJECT_DIR$/application/views/login.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_function_plc.php" />
@@ -144,18 +176,23 @@
         <option value="$PROJECT_DIR$/application/models/admin/Adminmodel.php" />
         <option value="$PROJECT_DIR$/application/views/admin/edit_user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/indexadmin.php" />
-        <option value="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
         <option value="$PROJECT_DIR$/application/views/admin/create_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Admincontroller.php" />
         <option value="$PROJECT_DIR$/application/views/supervisor/assignplc.php" />
         <option value="$PROJECT_DIR$/application/views/supervisor/create_assignement.php" />
         <option value="$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php" />
-        <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/views/admin/logs.php" />
         <option value="$PROJECT_DIR$/application/views/admin/logs_paginated.php" />
         <option value="$PROJECT_DIR$/application/models/admin/Logsmodel.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Logscontroller.php" />
+        <option value="$PROJECT_DIR$/aaa.html" />
+        <option value="$PROJECT_DIR$/application/views/user/edit_profile.php" />
+        <option value="$PROJECT_DIR$/application/views/supervisor/edit_profile.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php" />
+        <option value="$PROJECT_DIR$/application/controllers/user/Usercontroller.php" />
+        <option value="$PROJECT_DIR$/application/models/user/Usermodel.php" />
+        <option value="$PROJECT_DIR$/application/views/user/indexuser.php" />
       </list>
     </option>
   </component>
@@ -166,11 +203,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1678" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -190,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,7 +254,14 @@
               <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
@@ -233,7 +274,14 @@
               <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
@@ -246,12 +294,37 @@
               <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="supervisor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="smartfacilities" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smartfacilities" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -260,14 +333,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\smartfacilities\application\models\user" />
+      <recent name="C:\MAMP\htdocs\smartfacilities\application\views\user" />
       <recent name="C:\MAMP\htdocs\smartfacilities\application\views\admin" />
       <recent name="C:\MAMP\htdocs\smartfacilities\application\views\supervisor" />
       <recent name="C:\MAMP\htdocs\smartfacilities\resources\img\profiles" />
-      <recent name="C:\MAMP\htdocs\smartfacilities\application\models\supervisor" />
-      <recent name="C:\MAMP\htdocs\smartfacilities\application\models\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -360,16 +434,19 @@
       <workItem from="1506578467704" duration="4870000" />
       <workItem from="1506664023811" duration="12912000" />
       <workItem from="1506711974631" duration="2000" />
+      <workItem from="1506807387564" duration="338000" />
+      <workItem from="1506927224562" duration="14147000" />
+      <workItem from="1506970668333" duration="1907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463011000" />
+    <option name="totallyTimeSpent" value="479403000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15733737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2859304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -396,17 +473,17 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21481876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,34 +494,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/Template_Pagina.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="34" column="6" lean-forward="false" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/general_trends.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="71" column="43" lean-forward="false" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/db_bck/sf_db_bck_17-09-19.sql" />
-    <entry file="file://$PROJECT_DIR$/resources/db_bck/sf_db_bck_17-09-18.sql" />
     <entry file="file://$PROJECT_DIR$/resources/img/profiles/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -512,7 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="36" column="79" lean-forward="false" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -520,7 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="128" lean-forward="false" selection-start-line="8" selection-start-column="128" selection-end-line="8" selection-end-column="128" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-193">
           <caret line="95" column="61" lean-forward="false" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,7 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="26" column="25" lean-forward="true" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="41" column="82" lean-forward="false" selection-start-line="41" selection-start-column="82" selection-end-line="41" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -567,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="30" column="71" lean-forward="false" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -583,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,20 +643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1606">
           <caret line="96" column="16" lean-forward="false" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/supervisor/edit_profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="30" column="107" lean-forward="false" selection-start-line="30" selection-start-column="107" selection-end-line="30" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1281">
-          <caret line="88" column="45" lean-forward="false" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -677,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,12 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="76" column="40" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="77" selection-end-column="16" />
-          <folding>
-            <marker date="1506414051470" expanded="true" signature="4972:5001" ph="..." />
-            <marker date="1506414051470" expanded="true" signature="5460:5489" ph="..." />
-            <marker date="1506414051470" expanded="true" signature="6709:6721" ph="..." />
-            <marker date="1506414051470" expanded="true" signature="6995:7006" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -698,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="60" column="6" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="68" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,20 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
           <caret line="84" column="14" lean-forward="false" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="70" column="20" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="230" column="83" lean-forward="false" selection-start-line="230" selection-start-column="83" selection-end-line="230" selection-end-column="83" />
         </state>
       </provider>
     </entry>
@@ -737,27 +745,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Admincontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="139" column="54" lean-forward="false" selection-start-line="139" selection-start-column="23" selection-end-line="139" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/logs_paginated.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/admin/logs.php">
+    <entry file="file://$PROJECT_DIR$/aaa.html" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Logscontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="37" lean-forward="false" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -765,32 +758,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/logs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="135" column="37" lean-forward="false" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Admincontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="152" column="46" lean-forward="true" selection-start-line="152" selection-start-column="46" selection-end-line="152" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/edit_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="107" lean-forward="false" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/edit_profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="18" column="107" lean-forward="false" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="148" column="19" lean-forward="false" selection-start-line="148" selection-start-column="19" selection-end-line="148" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/supervisor/indexsupervisor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="41" lean-forward="false" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/supervisor/Supervisormodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/supervisor/Supervisorcontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="222" column="39" lean-forward="false" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="55" />
           <folding>
-            <element signature="n#logs_count#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#fetch_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#list_users#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#list_types#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#show_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#trace_log#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#clear_all_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
-            <element signature="n#aging_logs#0;n#Logsmodel#0;n#!!top" expanded="false" />
+            <element signature="n#update_profile#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#plc_settings#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#update_plc#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#manage_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#new_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#remove_plc_assignement#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#remote_management#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
+            <element signature="n#reports_charts#0;n#Supervisorcontroller#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Logscontroller.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/Usercontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="44" column="8" lean-forward="false" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding>
-            <element signature="n#__construct#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#search#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#export_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#clear_all_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <element signature="n#aging_logs#0;n#Logscontroller#0;n#!!top" expanded="false" />
-            <marker date="1506697475780" expanded="true" signature="4748:4800" ph="..." />
-            <marker date="1506697475780" expanded="true" signature="4876:4893" ph="..." />
+            <element signature="n#edit_profile#0;n#Usercontroller#0;n#!!top" expanded="false" />
+            <element signature="n#update_profile#0;n#Usercontroller#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/user/Usermodel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="73" lean-forward="false" selection-start-line="18" selection-start-column="73" selection-end-line="18" selection-end-column="73" />
+          <folding>
+            <element signature="n#list_buildings#0;n#Usermodel#0;n#!!top" expanded="false" />
+            <element signature="n#get_user#0;n#Usermodel#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/indexuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="133" column="50" lean-forward="false" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
