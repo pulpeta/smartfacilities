@@ -24,25 +24,24 @@ class Usercontroller extends CI_Controller{
     }
 
     public function index(){
-        //mostra tutti gli utenti del sistema
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('buildings', 'ID_Building', 'trim|integer');
 
         //recupera id user
         $user = $this->usermodel->get_user($_SESSION['username']);
         foreach ($user as $row) {
             $id_user = $row->id_user;
         }
-        //legge l'elenco degli edifici per la combobox
-        $buildings['buildings'] = $this->usermodel->list_buildings();
-        //ricava il codice da filtrare
-        $filter = $this->input->post('buildings');
-        //legge i dati filtrati
 
-        $plcs['plcs'] = $this->usermodel->filter_plc($filter, $id_user);
+        $plcs['plcs'] = $this->usermodel->filter_plc($id_user);
+
+        foreach ($plcs as $row){
+            //ricava id del plc
+            //${'plc'.$row->plc_id};
+            //legge gli ultimi 30 valori del plc
+
+        }
 
         //manda tutto alla view
-        $this->load->view('user/indexuser', array_merge($plcs, $buildings));
+        $this->load->view('user/indexuser', $plcs);
     }
 
     function plc_management(){
@@ -111,6 +110,10 @@ class Usercontroller extends CI_Controller{
         $this->logsmodel->trace_log($tracelog);
 
         redirect('user/usercontroller');
+    }
+
+    function wiki(){
+        $this->load->view('wiki/index');
     }
 
 }

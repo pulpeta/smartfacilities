@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
 
     function user_login(){
-        $this->load->library('form_validation');
+        //$this->load->library('form_validation');
 
         $this->form_validation->set_rules('username', 'Username', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
@@ -17,6 +17,9 @@ class Login extends CI_Controller {
             $user = $this->loginuser->validate_credentials($this->input->post('username'), $this->input->post('password'));
 
             $logondate = date ( 'Y-m-d H:i:s');
+
+            //inserire verifica se username esiste
+            //se non esiste redirect a login
 
             if ($user){
                 //crea dati sessione

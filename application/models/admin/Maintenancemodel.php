@@ -56,9 +56,7 @@ class Maintenancemodel extends CI_Model{
     }
 
     function db_stats(){
-        $link   = mysql_connect('localhost', 'mysql_user', 'mysql_password');
-        $status = explode('  ', mysql_stat($link));
-        print_r($status);
+
     }
 
 }

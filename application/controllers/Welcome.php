@@ -3,6 +3,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
+    public function __construct(){
+        parent::__construct();
+
+        $loggedin = $this->session->userdata('logged-in');
+        $role = $this->session->userdata('role_id');
+
+        if(isset($loggedin) || $loggedin = TRUE){
+
+            if ($role == 1){
+                redirect('admin/admincontroller');
+                }
+            if ($role == 2){
+                redirect('supervisor/supervisorcontroller');
+                }
+            if ($role == 3){
+                redirect('user/usercontroller');
+                }
+            }
+    }
+
     function index(){
 
 	    //attivare per home page
@@ -22,8 +42,11 @@ class Welcome extends CI_Controller {
     }
 
     function trends(){
-
         $trends['trends'] = $this->model->readall_trend();
 	    $this->load->view('general_trends', $trends);
+    }
+
+    function wiki(){
+        $this->load->view('wiki/index');
     }
 }

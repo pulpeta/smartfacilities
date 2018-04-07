@@ -1,0 +1,19 @@
+body{
+
+}
+
+#sidebar{
+    float: left;
+    margin-right: 20px;
+    width: 20%;
+    height: auto;
+}
+
+#content{
+    width: 70%;
+}
+
+#footer{
+    margin-top: 20px;
+    clear: both;
+}

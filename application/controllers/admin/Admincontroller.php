@@ -230,4 +230,8 @@ class Admincontroller extends CI_Controller{
 
         redirect('admin/admincontroller');
     }
+
+    function wiki(){
+        $this->load->view('wiki/index');
+    }
 }

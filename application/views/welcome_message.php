@@ -34,18 +34,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </a>
                         </li>
                         <li>
-                            <a href="
-                        <?php
-                            $loggedin = $this->session->userdata('logged-in');
-                            if(!isset($loggedin) || $loggedin != TRUE){
-                                echo site_url("welcome/login");
-                                echo '">Login <span class="glyphicons glyphicons-log-in"></span>';
-                            }else{
-                                echo site_url('login/user_logout');
-                                echo '">Logout <span class="glyphicons glyphicons-log-out"></span>';
-                            }
-                            ?>
-                            </a></li>
+                            <a href="<?php echo site_url("welcome/wiki") ?>">
+                                Wiki <span class="sr-only">(current)</span><span class="glyphicons glyphicons-question-sign"></span>
+                            </a>
+                        </li>
+                        <li>
+                                <a href="
+                                    <?php
+                                    $loggedin = $this->session->userdata('logged-in');
+                                    if(!isset($loggedin) || $loggedin != TRUE){
+                                        echo site_url("welcome/login");
+                                        echo '">Login <span class="glyphicons glyphicons-log-in"></span>';
+                                    }else{
+                                        echo site_url('login/user_logout');
+                                        echo '">Logout <span class="glyphicons glyphicons-log-out"></span>';
+                                    }
+                                    ?>
+                                </a>
+                            </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

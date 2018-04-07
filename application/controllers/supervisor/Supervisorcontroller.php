@@ -275,4 +275,7 @@ class Supervisorcontroller extends CI_Controller{
         $this->load->view('supervisor/charts');
     }
 
+    function wiki(){
+        $this->load->view('wiki/index');
+    }
 }

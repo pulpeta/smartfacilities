@@ -3,18 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>SF - Admin Area</title>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/bootstrap-theme.min.css'); ?>" media="all"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('resources/css/glyphicons.css'); ?>" media="all">
-
 </head>
+
 <body>
-
-
-
 <div class="container-fluid">
     <nav class="navbar navbar-default" style="margin-top: 20px">
         <div class="container-fluid">
@@ -43,16 +41,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php
+                            <li>
+                                <a href="<?php echo site_url("admin/admincontroller/wiki") ?>">
+                                    <span class="glyphicons glyphicons-question-sign"></span> Wiki
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php
                                             $id_user = $this->session->userdata('id_user');
                                             echo site_url("admin/admincontroller/edit_user/$id_user");
-                                         ?>"><span class="glyphicons glyphicons-user"></span> Edit Profile
+                                         ?>"><span class="glyphicons glyphicons-nameplate"></span> Edit Profile
                                 </a>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
-                                <span class="glyphicons glyphicons-log-out"></span> Logout
-                            </a>
+                            <li>
+                                <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
+                                    <span class="glyphicons glyphicons-log-out"></span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>

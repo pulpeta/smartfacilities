@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="container-fluid">
 
-    <nav class="navbar bg-info" style="margin-top: 20px">
+    <nav class="navbar navbar-inverse" style="margin-top: 20px">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="<?php echo site_url('user/usercontroller'); ?>"><span class="glyphicons glyphicons-group"></span> My PLCS <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="<?php echo site_url('user/usercontroller'); ?>"><span class="glyphicons glyphicons-robot"></span> My PLCS <span class="sr-only">(current)</span></a></li>
                     <li><a href="<?php echo site_url('user/usercontroller'); ?>"><span class="glyphicons glyphicons-charts"></span> Reports and Charts</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -38,6 +38,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
+                            <li>
+                                <a href="<?php echo site_url("user/usercontroller/wiki") ?>">
+                                    <span class="glyphicons glyphicons-question-sign"></span> Wiki
+                                </a>
+                            </li>
                             <li>
                                 <a href="<?php
                                 $id_user = $this->session->userdata('id_user');
@@ -48,9 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
-                                <span class="glyphicons glyphicons-log-out"></span> Logout
-                            </a>
+                            <li>
+                                <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
+                                    <span class="glyphicons glyphicons-log-out"></span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -84,6 +91,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <th>
                             Trends
                         </th>
+                        <th>
+
+                        </th>
                     </tr>
 
                     </thead>
@@ -100,64 +110,66 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <td>
                                 <?php echo $plc->location; ?>
                             </td>
-                            <td>
-                                <p>min temp - max temp</p>
-                                <p>min hum - max hum</p>
+                            <td class="text-primary">
                                 <p>
-                                    realtime data: aaa aaa
+                                    Temp range: <strong>16°  22°</strong>
+                                </p>
+                                <p>
+                                    Hum range: <strong>35%  45%</strong>
+                                </p>
+                            </td>
+                            <td class="text-primary">
+                                Realtime data:
+                                <p class="text-center">
+
+                                    <strong class="badge" style="padding: 10px; background-color: red; margin: 10px">21.5°</strong>
+                                    <strong class="badge" style="padding: 10px; background-color: cornflowerblue; margin: 10px">35.7%</strong>
                                 </p>
                             </td>
                             <td>
-                                <?php
-                                    echo 'read actual data';
-                                ?>
-                                <br/>
-                                <canvas id="<?php echo $plc->name; ?>" width="100" height="50"></canvas>
-                                <script src="<?php echo base_url('resources/js/Chart.bundle.min.js'); ?>"></script>
-                                <?php
+                                <div style="width: 500px; height: 100px;">
+                                    <canvas id="<?php echo $plc->name; ?>" width="700" height="100"></canvas>
+                                    <script src="<?php echo base_url('resources/js/Chart.bundle.min.js'); ?>"></script>
+                                    <script>
+                                        var ctx = document.getElementById("<?php echo $plc->name; ?>");
+                                        var <?php echo $plc->name; ?> = new Chart(ctx, {
+                                            type: 'line',
+                                            data: {
+                                                labels: [
+                                                    "Red", "Blue", "Yellow", "Green", "Purple", "Orange"
+                                                ],
+                                                datasets: [{
+                                                    label: 'Temperatures',
+                                                    data: [
+                                                        12, 19, 3, 5, 2, 3
+                                                    ],
+
+                                                    borderColor: [
+                                                        'rgba(255,99,132,1)',
+                                                    ],
+                                                    borderWidth: 1
+                                                }]
+                                            },
+                                            options: {
+                                                scales: {
+                                                    yAxes: [{
+                                                        ticks: {
+                                                            beginAtZero:true
+                                                        }
+                                                    }]
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                    <?php
                                     //legge i dat per il grafico
-                                ?>
+                                    ?>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
                 </table>
-
-                <canvas id="myChart" width="150" height="50"></canvas>
-                <script src="<?php echo base_url('resources/js/Chart.bundle.min.js'); ?>"></script>
-                <script>
-                    var ctx = document.getElementById("myChart").getContext('2d');
-                    var myChart = new Chart(ctx, {
-                        type: 'bar',
-                        responsive: 'true',
-                        data: {
-                            labels: ["Red", "Blue"],
-                            datasets: [{
-                                label: '# of Votes',
-                                data: [12, 19],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero:true
-                                    }
-                                }]
-                            }
-                        }
-                    });
-                </script>
-
             </div>
             <div class="col-sm-1">
 
@@ -180,6 +192,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url('resources/js/jquery-3.2.1.min.js'); ?>"></script>
 <script src="<?php echo base_url('resources/js/bootstrap.min.js'); ?>"></script>
 <script src="<?php echo base_url('resources/js/npm.js'); ?>"></script>
-
 
 </html>

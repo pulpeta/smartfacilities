@@ -57,6 +57,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </a>
                         <ul class="dropdown-menu">
                             <li>
+                                <a href="<?php echo site_url("supervisor/supervisorcontroller/wiki") ?>">
+                                    <span class="glyphicons glyphicons-question-sign"></span> Wiki
+                                </a>
+                            </li>
+                            <li>
                                 <a href="<?php
                                             $id_user = $this->session->userdata('id_user');
                                             echo site_url("supervisor/supervisorcontroller/edit_profile/$id_user");
@@ -66,9 +71,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
-                                <span class="glyphicons glyphicons-log-out"></span> Logout
-                            </a>
+                            <li>
+                                <a href="<?php echo site_url("login/user_logout"); ?>" style="text-decoration: none">
+                                    <span class="glyphicons glyphicons-log-out"></span> Logout
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
